@@ -1,0 +1,563 @@
+- generic [active] [ref=f12e1]:
+  - link "Ir al contenido" [ref=f12e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f12e3]:
+    - generic [ref=f12e4]:
+      - link "Junior Martinez Transfers & Tours — home" [ref=f12e5] [cursor=pointer]:
+        - /url: "#top"
+        - img [ref=f12e7]:
+          - generic [ref=f12e8]: JM
+        - generic [ref=f12e11]:
+          - strong [ref=f12e12]: Junior Martinez
+          - generic [ref=f12e13]: Transfer y Taxi · Sosúa
+      - navigation "Main" [ref=f12e14]:
+        - link "Servicios" [ref=f12e15] [cursor=pointer]:
+          - /url: "#services"
+        - link "Destinos" [ref=f12e16] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Cotizar" [ref=f12e17] [cursor=pointer]:
+          - /url: "#quote"
+        - link "Preguntas" [ref=f12e18] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Contacto" [ref=f12e19] [cursor=pointer]:
+          - /url: "#contact"
+      - group "Language" [ref=f12e21]:
+        - button "EN" [ref=f12e22] [cursor=pointer]
+        - button "ES" [pressed] [ref=f12e23] [cursor=pointer]
+  - main [ref=f12e24]:
+    - region [ref=f12e25]:
+      - generic [ref=f12e38]:
+        - generic [ref=f12e39]:
+          - heading [level=1] [ref=f12e40]:
+            - text: Llegas a POP.
+            - emphasis [ref=f12e41]: Alguien ya te espera.
+          - paragraph [ref=f12e42]: Junior Martínez ofrece traslados privados a precio fijo por toda la Costa Norte dominicana. Tu chofer monitorea tu vuelo, te recibe en llegadas con un cartel con tu nombre y te lleva a tu hotel o villa en un vehículo fresco y cómodo. Sin taxímetro. Sin regatear en el parqueo. Sin sorpresas.
+        - generic [ref=f12e43]:
+          - generic [ref=f12e44]:
+            - generic [ref=f12e45]: Arma tu viaje
+            - generic [ref=f12e46]: 1–6 pasajeros · un precio por vehículo
+          - generic [ref=f12e47]:
+            - generic [ref=f12e48]:
+              - generic [ref=f12e49]: Recogida
+              - combobox "Pick-up location" [ref=f12e50] [cursor=pointer]:
+                - option "Puerto Plata Airport (POP)" [selected]
+                - option "Santiago Airport (STI)"
+                - option "Samaná Airport (AZS)"
+                - option "Las Américas Airport (SDQ)"
+                - option "Sosúa (in town)"
+            - generic [ref=f12e56]:
+              - generic [ref=f12e57]: Destino
+              - combobox "Drop-off location" [ref=f12e58] [cursor=pointer]:
+                - option "Puerto Plata Airport (POP)"
+                - option "Santiago Airport (STI)"
+                - option "Samaná Airport (AZS)"
+                - option "Las Américas Airport (SDQ)"
+                - option "Sosúa (in town)" [selected]
+                - option "Casa Linda"
+                - option "Playa Laguna"
+                - option "Villa Caribick"
+                - option "Coconut Palms"
+                - option "Hide Away Beach"
+                - option "Perla Marina"
+                - option "Sea Horse Ranch"
+                - option "Cabarete Center"
+                - option "Hacienda el Choco"
+                - option "Celuisma"
+                - option "La Unión"
+                - option "Sabaneta"
+                - option "Blue Moon"
+                - option "Gaspar Hernández"
+                - option "Playa Dorada"
+                - option "Jamao"
+                - option "Puerto Plata"
+                - option "Riu Merengue"
+                - option "Cofresí / Costambar"
+                - option "La Cumbre (Moca)"
+                - option "Bahía Príncipe"
+                - option "Damajagua (27 Waterfalls)"
+                - option "Luperón"
+                - option "Playa Grande"
+                - option "Río San Juan"
+                - option "Cabrera"
+                - option "Blue Lagoon"
+                - option "Castillo / La Isabela"
+                - option "Punta Rucia"
+                - option "Santiago"
+                - option "La Vega"
+                - option "Nagua"
+                - option "Bonao"
+                - option "San Francisco de Macorís"
+                - option "Valverde Mao"
+                - option "Montecristi"
+                - option "Dajabón"
+                - option "Sánchez"
+                - option "Las Terrenas"
+                - option "Samaná"
+                - option "Boca Chica"
+                - option "La Galera"
+                - option "Santo Domingo"
+                - option "Juan Dolio"
+                - option "San Pedro de Macorís"
+                - option "Barahona"
+                - option "La Romana"
+                - option "Higüey"
+                - option "Punta Cana"
+          - generic [ref=f12e59]:
+            - generic [ref=f12e60]:
+              - generic [ref=f12e61]: Tiempo
+              - generic [ref=f12e62]: ≈ 15 min
+            - generic [ref=f12e63]:
+              - generic [ref=f12e64]: Precio fijo
+              - generic [ref=f12e65]: US$25
+            - link "Reservar este viaje · US$25" [ref=f12e66] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior%20Martinez!%20Quisiera%20un%20traslado%20desde%20Puerto%20Plata%20Airport%20(POP)%20hasta%20Sos%C3%BAa%20(in%20town).%20Veo%20que%20el%20precio%20fijo%20es%20US%2425.%20Fecha%3A%20%2F%20Hora%3A%20%2F%20Pasajeros%3A%20
+          - paragraph [ref=f12e70]: Los precios son por vehículo para 1–6 personas, de día o de noche. Los tiempos son aproximados y dependen del tráfico. Envía tu número de vuelo y Junior te confirma el precio exacto por WhatsApp.
+        - list [ref=f12e71]:
+          - listitem [ref=f12e72]:
+            - generic [ref=f12e75]: Con licencia y seguro
+          - listitem [ref=f12e76]:
+            - generic [ref=f12e79]: Inglés y español
+          - listitem [ref=f12e80]:
+            - generic [ref=f12e83]: 24/7, todos los vuelos
+    - region [ref=f12e84]:
+      - generic [ref=f12e85]:
+        - generic [ref=f12e86]:
+          - heading [level=2] [ref=f12e87]:
+            - text: Por qué los viajeros de la
+            - emphasis [ref=f12e88]: Costa Norte
+            - text: eligen a Junior
+          - paragraph [ref=f12e89]: "Junior Martínez lleva años manejando esta costa: la ruta del aeropuerto a Sosúa, los kitesurfistas rumbo a Cabarete, las familias que suben a Playa Grande, las parejas que buscan los saltos de Damajagua. Sabe cuál carretera se inunda en octubre y cuál atajo te ahorra veinte minutos un domingo."
+          - paragraph [ref=f12e90]: "Esto no es un call center. Cuando escribes al WhatsApp de esta página, le escribes a Junior. Él te confirma el precio antes de viajar, monitorea tu vuelo y responde si tus planes cambian a medianoche. Esa es toda la promesa: un chofer al que sí puedes contactar, un precio acordado por escrito y un carro limpio, fresco y cómodo esperándote."
+          - list [ref=f12e91]:
+            - listitem [ref=f12e92]: Servicio privado únicamente — nunca compartes el vehículo con desconocidos
+            - listitem [ref=f12e93]: "Monitoreo de vuelo: si aterrizas tarde, no pagas nada extra"
+            - listitem [ref=f12e94]: Sillas para niños disponibles a pedido, sin costo
+            - listitem [ref=f12e95]: Efectivo en US$ o pesos, o pago con tarjeta coordinado por adelantado
+          - link "Escríbele a Junior" [ref=f12e96] [cursor=pointer]:
+            - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Vi%20tu%20p%C3%A1gina%20web%20y%20quisiera%20consultar%20por%20un%20traslado.
+        - generic [ref=f12e100]:
+          - figure "Junior Martínez · Sosúa, Puerto Plata" [ref=f12e101]
+          - generic [ref=f12e103]:
+            - generic [ref=f12e104]:
+              - generic [ref=f12e105]: 50+
+              - text: destinos a precio fijo
+            - generic [ref=f12e106]:
+              - generic [ref=f12e107]: "0"
+              - text: cargos sorpresa, nunca
+    - region [ref=f12e108]:
+      - generic [ref=f12e109]:
+        - generic [ref=f12e110]:
+          - heading [level=2] [ref=f12e111]:
+            - text: Traslados por toda laCosta Norte
+            - emphasis [ref=f12e112]: dominicana
+          - paragraph [ref=f12e113]: Todos los servicios son privados, a precio fijo y se reservan con un solo mensaje de WhatsApp.
+        - generic [ref=f12e114]:
+          - article [ref=f12e115]:
+            - heading "Traslados al aeropuerto" [level=3] [ref=f12e119]
+            - paragraph [ref=f12e120]: Puerto Plata (POP), Santiago (STI), Samaná (AZS) y Las Américas (SDQ). Recibimiento en llegadas con cartel con tu nombre, equipaje atendido y monitoreo de vuelo por si aterrizas tarde.
+            - paragraph [ref=f12e121]: Desde US$25 · POP ↔ Sosúa
+            - link "Reservar traslado al aeropuerto" [ref=f12e122] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20al%20aeropuerto.%20Datos%20de%20mi%20vuelo%3A%20
+          - article [ref=f12e126]:
+            - heading "Taxi privado" [level=3] [ref=f12e130]
+            - paragraph [ref=f12e131]: "De punto a punto en Sosúa, Cabarete y Puerto Plata: la cena, el supermercado, una noche fuera o el regreso a las 2am. El mismo carro, el mismo chofer, precio acordado antes de subir."
+            - paragraph [ref=f12e132]: Desde US$7 · dentro de Sosúa
+            - link "Reservar un taxi privado" [ref=f12e133] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Quisiera%20un%20taxi%20privado.%20Recogida%20en%3A%20
+          - article [ref=f12e137]:
+            - heading "Traslados a hoteles y villas" [level=3] [ref=f12e141]
+            - paragraph [ref=f12e142]: "Puerta a puerta a todos los resorts y residenciales de la costa: Playa Dorada, Casa Linda, Sea Horse Ranch, Perla Marina, Bahía Príncipe, Riu Merengue, Celuisma y más."
+            - paragraph [ref=f12e143]: Desde US$10 · villas zona Sosúa
+            - link "Reservar traslado a hotel" [ref=f12e144] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20hotel%2Fvilla.%20Mi%20alojamiento%20es%3A%20
+          - article [ref=f12e148]:
+            - heading "Excursiones y paseos" [level=3] [ref=f12e152]
+            - paragraph [ref=f12e153]: Los 27 Charcos de Damajagua, Playa Grande, Punta Rucia y Cayo Arena, el teleférico de Puerto Plata, la Fortaleza San Felipe, Santiago. Junior te espera mientras exploras y te lleva de vuelta.
+            - paragraph [ref=f12e154]: Desde US$50 · medio día
+            - link "Planear una excursión" [ref=f12e155] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Quisiera%20organizar%20una%20excursi%C3%B3n%20a%3A%20
+          - article [ref=f12e159]:
+            - heading "VIP y chofer por hora" [level=3] [ref=f12e163]
+            - paragraph [ref=f12e164]: Contrata a Junior por hora para reuniones, visitas a propiedades, una boda o un cliente. Discreto, puntual, bien presentado y disponible el tiempo que necesites.
+            - paragraph [ref=f12e165]: Tarifa por hora a consultar
+            - link "Solicitar servicio VIP" [ref=f12e166] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Quisiera%20contratar%20un%20chofer%20privado%20por%20hora%20el%20d%C3%ADa%3A%20
+          - article [ref=f12e170]:
+            - heading "Traslados de larga distancia" [level=3] [ref=f12e174]
+            - paragraph [ref=f12e175]: "Cruzando el país por carretera: Santo Domingo, Punta Cana, Samaná, Las Terrenas, Barahona, Montecristi. Un solo vehículo todo el camino, con las paradas que quieras."
+            - paragraph [ref=f12e176]: Desde US$100 · Santiago y más allá
+            - link "Cotizar larga distancia" [ref=f12e177] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20de%20larga%20distancia%20desde%20Sos%C3%BAa%20hasta%3A%20
+    - region "Book by WhatsApp" [ref=f12e181]:
+      - generic [ref=f12e182]:
+        - generic [ref=f12e183]:
+          - heading "¿Aún lo estás pensando? Pregunta el precio." [level=2] [ref=f12e184]
+          - paragraph [ref=f12e185]: Envía tu fecha, número de vuelo y destino. Junior responde con un total fijo, normalmente en minutos.
+        - link "Pedir un precio" [ref=f12e186] [cursor=pointer]:
+          - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20%C2%BFMe%20puedes%20dar%20un%20precio%20para%20un%20traslado%3F%20Fecha%3A%20%2F%20Vuelo%3A%20%2F%20Destino%3A%20
+    - region [ref=f12e190]:
+      - generic [ref=f12e191]:
+        - heading [level=2] [ref=f12e193]:
+          - text: Seis razones por las que tuviaje sale
+          - emphasis [ref=f12e194]: exacto
+        - generic [ref=f12e195]:
+          - generic [ref=f12e196]:
+            - heading "Choferes con licencia" [level=3] [ref=f12e199]
+            - paragraph [ref=f12e200]: Con licencia, seguro y permiso para trabajar en el aeropuerto. Viajas con un profesional, no con un oportunista en la salida.
+          - generic [ref=f12e201]:
+            - heading "Vehículos cómodos" [level=3] [ref=f12e204]
+            - paragraph [ref=f12e205]: "Carros y minivans modernos e impecables con espacio real para equipaje: palos de golf, tablas de surf, equipo de kite y las maletas de toda la familia."
+          - generic [ref=f12e206]:
+            - heading "Servicio puntual" [level=3] [ref=f12e209]
+            - paragraph [ref=f12e210]: Junior llega temprano, no a la hora. Monitorea los vuelos, así que si aterrizas dos horas tarde tu chofer sigue ahí esperando.
+          - generic [ref=f12e211]:
+            - heading "Precios fijos" [level=3] [ref=f12e214]
+            - paragraph [ref=f12e215]: El precio que acuerdas por WhatsApp es el que pagas. Sin taxímetro, sin recargo nocturno, sin cargo por maletas, sin renegociar al llegar.
+          - generic [ref=f12e216]:
+            - heading "Inglés y español" [level=3] [ref=f12e219]
+            - paragraph [ref=f12e220]: Reserva, pregunta y cambia planes en inglés o español. Nada se pierde entre tu mensaje y tu chofer.
+          - generic [ref=f12e221]:
+            - heading "Disponible 24/7" [level=3] [ref=f12e224]
+            - paragraph [ref=f12e225]: La salida de las 5am y la llegada de la 1am son normales aquí. Escribe a cualquier hora y recibe una respuesta real.
+    - region [ref=f12e226]:
+      - generic [ref=f12e227]:
+        - generic [ref=f12e228]:
+          - heading [level=2] [ref=f12e229]:
+            - text: A dónde va
+            - emphasis [ref=f12e230]: de verdad
+            - text: la Costa Norte
+          - paragraph [ref=f12e231]: Precios fijos desde Sosúa, por vehículo, 1–6 pasajeros. El mismo precio en sentido contrario.
+        - generic [ref=f12e232]:
+          - article [ref=f12e233]:
+            - generic [ref=f12e234]:
+              - img "Puerto Plata International Airport arrivals" [ref=f12e235]
+              - generic [ref=f12e236]: POP
+            - generic [ref=f12e237]:
+              - heading "Aeropuerto Puerto Plata" [level=3] [ref=f12e238]
+              - paragraph [ref=f12e239]: Gregorio Luperón Internacional. Recibimiento en llegadas, monitoreo de vuelo y equipaje atendido.
+              - generic [ref=f12e240]:
+                - generic [ref=f12e241]: ≈ 15 min
+                - generic [ref=f12e242]: US$25
+              - link "Reservar traslado POP" [ref=f12e243] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20entre%20el%20Aeropuerto%20de%20Puerto%20Plata%20(POP)%20y%20Sos%C3%BAa.%20Mi%20vuelo%20es%3A%20
+          - article [ref=f12e247]:
+            - generic [ref=f12e248]:
+              - img "Sosúa beach, Dominican Republic" [ref=f12e249]
+              - generic [ref=f12e250]: SOS
+            - generic [ref=f12e251]:
+              - heading "Sosúa" [level=3] [ref=f12e252]
+              - paragraph [ref=f12e253]: Bahía de Sosúa, Playa Alicia, la calle Pedro Clisante y todos los residenciales del pueblo.
+              - generic [ref=f12e254]:
+                - generic [ref=f12e255]: ≈ 5 min
+                - generic [ref=f12e256]: US$7
+              - link "Reservar en Sosúa" [ref=f12e257] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20taxi%20dentro%20de%20Sos%C3%BAa.%20Recogida%20en%3A%20
+          - article [ref=f12e261]:
+            - generic [ref=f12e262]:
+              - img "Kitesurfers at Cabarete beach" [ref=f12e263]
+              - generic [ref=f12e264]: CAB
+            - generic [ref=f12e265]:
+              - heading "Cabarete" [level=3] [ref=f12e266]
+              - paragraph [ref=f12e267]: La capital del kite y el surf. Las tablas y el equipo viajan gratis, solo dinos qué traes.
+              - generic [ref=f12e268]:
+                - generic [ref=f12e269]: ≈ 15 min
+                - generic [ref=f12e270]: US$15
+              - link "Reservar Cabarete" [ref=f12e271] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20Cabarete.%20Fecha%20y%20hora%3A%20
+          - article [ref=f12e275]:
+            - generic [ref=f12e276]:
+              - img "Puerto Plata city and Mount Isabel de Torres" [ref=f12e277]
+              - generic [ref=f12e278]: PLP
+            - generic [ref=f12e279]:
+              - heading "Puerto Plata" [level=3] [ref=f12e280]
+              - paragraph [ref=f12e281]: El Malecón, la Fortaleza San Felipe, el museo del ámbar y el teleférico a Loma Isabel de Torres.
+              - generic [ref=f12e282]:
+                - generic [ref=f12e283]: ≈ 30 min
+                - generic [ref=f12e284]: US$35
+              - link "Reservar Puerto Plata" [ref=f12e285] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20Puerto%20Plata.%20Fecha%20y%20hora%3A%20
+          - article [ref=f12e289]:
+            - generic [ref=f12e290]:
+              - img "Cofresí beach and resort area" [ref=f12e291]
+              - generic [ref=f12e292]: COF
+            - generic [ref=f12e293]:
+              - heading "Cofresí y Costambar" [level=3] [ref=f12e294]
+              - paragraph [ref=f12e295]: Ocean World, Lifestyle Holidays y las villas de Costambar, al oeste de Puerto Plata.
+              - generic [ref=f12e296]:
+                - generic [ref=f12e297]: ≈ 40 min
+                - generic [ref=f12e298]: US$50
+              - link "Reservar Cofresí" [ref=f12e299] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20Cofres%C3%AD%20%2F%20Costambar.%20Fecha%20y%20hora%3A%20
+          - article [ref=f12e303]:
+            - generic [ref=f12e304]:
+              - img "Laguna Gri-Gri at Río San Juan" [ref=f12e305]
+              - generic [ref=f12e306]: RSJ
+            - generic [ref=f12e307]:
+              - heading "Río San Juan" [level=3] [ref=f12e308]
+              - paragraph [ref=f12e309]: La Laguna Gri-Grí, Playa Caletón y el extremo tranquilo de la costa. Playa Grande es la misma ruta.
+              - generic [ref=f12e310]:
+                - generic [ref=f12e311]: ≈ 1 h 15
+                - generic [ref=f12e312]: US$100
+              - link "Reservar Río San Juan" [ref=f12e313] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20R%C3%ADo%20San%20Juan.%20Fecha%20y%20hora%3A%20
+          - article [ref=f12e317]:
+            - generic [ref=f12e318]:
+              - img "Cayo Arena sandbank off Punta Rucia" [ref=f12e319]
+              - generic [ref=f12e320]: PRC
+            - generic [ref=f12e321]:
+              - heading "Punta Rucia" [level=3] [ref=f12e322]
+              - paragraph [ref=f12e323]: El punto de salida hacia Cayo Arena, el banco de arena en medio del arrecife. Un día completo.
+              - generic [ref=f12e324]:
+                - generic [ref=f12e325]: ≈ 2 h
+                - generic [ref=f12e326]: US$200
+              - link "Reservar Punta Rucia" [ref=f12e327] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Quisiera%20ir%20a%20Punta%20Rucia%20%2F%20Cayo%20Arena.%20Fecha%3A%20
+          - article [ref=f12e331]:
+            - generic [ref=f12e332]:
+              - img "Monument to the Heroes in Santiago de los Caballeros" [ref=f12e333]
+              - generic [ref=f12e334]: STI
+            - generic [ref=f12e335]:
+              - heading "Santiago" [level=3] [ref=f12e336]
+              - paragraph [ref=f12e337]: La ciudad y el Aeropuerto Internacional del Cibao, por la carretera de montaña de La Cumbre.
+              - generic [ref=f12e338]:
+                - generic [ref=f12e339]: ≈ 1 h 30
+                - generic [ref=f12e340]: US$100
+              - link "Reservar Santiago" [ref=f12e341] [cursor=pointer]:
+                - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Necesito%20un%20traslado%20a%20Santiago.%20Fecha%20y%20hora%3A%20
+    - region "Book by WhatsApp" [ref=f12e345]:
+      - generic [ref=f12e346]:
+        - generic [ref=f12e347]:
+          - heading "¿No está en la lista, o viajan en grupo grande?" [level=2] [ref=f12e348]
+          - paragraph [ref=f12e349]: Junior cubre todo el país y cualquier tamaño de grupo — seis en una minivan, más con un segundo vehículo a la misma tarifa. Envía los detalles y recibe un total fijo.
+        - link "Cotización personalizada" [ref=f12e350] [cursor=pointer]:
+          - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Tengo%20un%20viaje%20que%20no%20encaja%20en%20la%20lista%20est%C3%A1ndar%20%E2%80%94%20destino%20y%2Fo%20tama%C3%B1o%20del%20grupo%3A%20
+    - region [ref=f12e354]:
+      - generic [ref=f12e355]:
+        - heading [level=2] [ref=f12e357]:
+          - text: Lo que dicen los pasajerostras el
+          - emphasis [ref=f12e358]: primer viaje
+        - generic [ref=f12e359]:
+          - blockquote [ref=f12e360]:
+            - generic "5 out of 5" [ref=f12e361]
+            - paragraph [ref=f12e372]: Nuestro vuelo a POP llegó dos horas tarde y yo ya me veía tirado en el aeropuerto. Junior estaba ahí con el cartel, tranquilísimo, y no cobró un peso de más. Carro fresco, buena conversación, y en la villa de Sosúa en quince minutos.
+            - generic [ref=f12e373]:
+              - generic [ref=f12e374]: Rachel & Tom P.
+              - generic [ref=f12e375]: Toronto · POP → Sosúa
+          - blockquote [ref=f12e376]:
+            - generic "5 out of 5" [ref=f12e377]
+            - paragraph [ref=f12e388]: Viajo a Cabarete dos veces al año con dos tablas de kite y un bulto de equipo. A Junior nunca le molesta el equipaje, siempre confirma el precio por WhatsApp la noche antes y está afuera del apartamento antes de que termine mi café.
+            - generic [ref=f12e389]:
+              - generic [ref=f12e390]: Mathieu L.
+              - generic [ref=f12e391]: Montreal · Cliente frecuente Cabarete
+          - blockquote [ref=f12e392]:
+            - generic "5 out of 5" [ref=f12e393]
+            - paragraph [ref=f12e404]: Reservamos en inglés por WhatsApp desde Alemania dos semanas antes de volar. La respuesta llegó en diez minutos con el precio exacto para cuatro personas más una silla de niño. Todo pasó tal como estaba escrito. Eso es raro y hay que decirlo.
+            - generic [ref=f12e405]:
+              - generic [ref=f12e406]: Familie Brenner
+              - generic [ref=f12e407]: Hamburgo · POP → Playa Dorada
+          - blockquote [ref=f12e408]:
+            - generic "5 out of 5" [ref=f12e409]
+            - paragraph [ref=f12e420]: Contratamos a Junior un día completo para Damajagua y después Puerto Plata. Esperó en cada parada, nos recomendó un lugar para almorzar que jamás habríamos encontrado, y el total fue el número que acordamos esa mañana. Lo usamos cuatro veces más esa semana.
+            - generic [ref=f12e421]:
+              - generic [ref=f12e422]: Denise A.
+              - generic [ref=f12e423]: Nueva Jersey · Excursión de día completo
+          - blockquote [ref=f12e424]:
+            - generic "5 out of 5" [ref=f12e425]
+            - paragraph [ref=f12e436]: Administro una villa en Sea Horse Ranch y mando a todos mis huéspedes con Junior. En tres temporadas no ha llegado tarde ni una vez, y ni un solo huésped me ha reclamado por el precio. Por eso lo sigo usando.
+            - generic [ref=f12e437]:
+              - generic [ref=f12e438]: Karin V.
+              - generic [ref=f12e439]: Sosúa · Administradora de villas
+          - blockquote [ref=f12e440]:
+            - generic "5 out of 5" [ref=f12e441]
+            - paragraph [ref=f12e452]: Santo Domingo ida y vuelta en un día por una reunión de trabajo. Wi-Fi, carro silencioso, llegamos veinte minutos antes. Costó menos que los dos vuelos domésticos que estaba a punto de comprar.
+            - generic [ref=f12e453]:
+              - generic [ref=f12e454]: Andrés R.
+              - generic [ref=f12e455]: Sosúa → Santo Domingo
+    - region [ref=f12e456]:
+      - generic [ref=f12e457]:
+        - generic [ref=f12e458]:
+          - heading [level=2] [ref=f12e459]:
+            - text: Recibe tu precio fijoen
+            - emphasis [ref=f12e460]: un mensaje
+          - paragraph [ref=f12e461]: "Llena esto y se convierte en un mensaje de WhatsApp ya redactado: solo tienes que enviarlo. Esta web no guarda nada y nadie te agrega a una lista de correos."
+          - list [ref=f12e462]:
+            - listitem [ref=f12e463]: Respuesta normalmente en minutos, las 24 horas
+            - listitem [ref=f12e464]: El total cotizado es definitivo — sin taxímetro, sin extras
+            - listitem [ref=f12e465]: Los viajes de ida y vuelta reservados juntos llevan una sola confirmación
+          - paragraph [ref=f12e469]: ¿Vienes en avión? Incluye tu número de vuelo. Junior lo monitorea y ajusta la recogida automáticamente si te retrasas.
+        - generic [ref=f12e470]:
+          - generic [ref=f12e471]:
+            - generic [ref=f12e472]:
+              - generic [ref=f12e473]: Tu nombre
+              - textbox "Tu nombre" [ref=f12e474]:
+                - /placeholder: Maria Lopez
+            - generic [ref=f12e475]:
+              - generic [ref=f12e476]: Pasajeros
+              - spinbutton "Pasajeros" [ref=f12e477]: "2"
+          - generic [ref=f12e478]:
+            - generic [ref=f12e479]:
+              - generic [ref=f12e480]: Recogida
+              - combobox "Recogida" [ref=f12e481]
+            - generic [ref=f12e482]:
+              - generic [ref=f12e483]: Destino
+              - combobox "Destino" [ref=f12e484]
+          - generic [ref=f12e485]:
+            - generic [ref=f12e486]:
+              - generic [ref=f12e487]: Fecha
+              - textbox "Fecha" [ref=f12e488]: 2026-07-28
+            - generic [ref=f12e489]:
+              - generic [ref=f12e490]: Hora
+              - textbox "Hora" [ref=f12e491]
+          - generic [ref=f12e492]:
+            - generic [ref=f12e493]:
+              - text: Número de vuelo
+              - emphasis [ref=f12e494]: (opcional)
+            - textbox "Número de vuelo (opcional)" [ref=f12e495]:
+              - /placeholder: e.g. DL 1234
+          - group "Tipo de viaje" [ref=f12e496]:
+            - generic [ref=f12e498]:
+              - generic [ref=f12e499]:
+                - radio "Solo ida" [checked] [ref=f12e500] [cursor=pointer]
+                - generic [ref=f12e501] [cursor=pointer]: Solo ida
+              - generic [ref=f12e502]:
+                - radio "Ida y vuelta" [ref=f12e503] [cursor=pointer]
+                - generic [ref=f12e504] [cursor=pointer]: Ida y vuelta
+              - generic [ref=f12e505]:
+                - radio "Por hora o día completo" [ref=f12e506] [cursor=pointer]
+                - generic [ref=f12e507] [cursor=pointer]: Por hora o día completo
+          - generic [ref=f12e508]:
+            - generic [ref=f12e509]:
+              - text: ¿Algo más?
+              - emphasis [ref=f12e510]: (opcional)
+            - textbox "¿Algo más? (opcional)" [ref=f12e511]:
+              - /placeholder: Silla de niño, equipaje extra, tablas de surf, una parada en el camino…
+          - button "Enviar por WhatsApp" [ref=f12e512] [cursor=pointer]
+          - status [ref=f12e516]: Abre WhatsApp con tus datos ya escritos. Tú solo lo envías.
+    - region [ref=f12e517]:
+      - generic [ref=f12e518]:
+        - heading [level=2] [ref=f12e520]:
+          - text: Lo que preguntan los viajeros
+          - emphasis [ref=f12e521]: antes
+          - text: de reservar
+        - generic [ref=f12e522]:
+          - group [ref=f12e523]:
+            - generic "¿Cómo reservo?" [ref=f12e524] [cursor=pointer]
+            - paragraph [ref=f12e528]: Envía un solo mensaje de WhatsApp con tu fecha, hora, punto de recogida, destino y —si vienes en avión— tu número de vuelo. Junior responde con un total fijo en dólares. Cuando dices que sí, queda reservado. No hay app que descargar, ni cuenta, ni depósito para traslados normales.
+          - group [ref=f12e529]:
+            - generic "¿Aceptan efectivo?" [ref=f12e530] [cursor=pointer]
+          - group [ref=f12e533]:
+            - generic "¿Ofrecen viajes de ida y vuelta?" [ref=f12e534] [cursor=pointer]
+          - group [ref=f12e537]:
+            - generic "¿El precio es realmente fijo?" [ref=f12e538] [cursor=pointer]
+          - group [ref=f12e541]:
+            - generic "¿Puedo pagar en dólares?" [ref=f12e542] [cursor=pointer]
+          - group [ref=f12e545]:
+            - generic "¿Cómo encuentro a mi chofer en el aeropuerto?" [ref=f12e546] [cursor=pointer]
+          - group [ref=f12e549]:
+            - generic "¿Con cuánta anticipación debo reservar?" [ref=f12e550] [cursor=pointer]
+          - group [ref=f12e553]:
+            - generic "¿Tienen sillas para niños?" [ref=f12e554] [cursor=pointer]
+    - region [ref=f12e557]:
+      - generic [ref=f12e558]:
+        - heading [level=2] [ref=f12e559]:
+          - text: Tu chofer
+          - emphasis [ref=f12e560]: ya está despierto
+          - text: .
+        - paragraph [ref=f12e561]: Sea la hora que sea, envía tu vuelo y tu destino. Tendrás un precio fijo de vuelta antes de terminar de desempacar el bulto de mano.
+        - generic [ref=f12e562]:
+          - link "Reservar por WhatsApp" [ref=f12e563] [cursor=pointer]:
+            - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Quisiera%20reservar%20un%20traslado.%20Fecha%3A%20%2F%20Hora%3A%20%2F%20Desde%3A%20%2F%20Hasta%3A%20%2F%20Pasajeros%3A%20
+          - link "Llamar al +1 829 299 1661" [ref=f12e567] [cursor=pointer]:
+            - /url: tel:+18292991661
+        - paragraph [ref=f12e571]: Responde 24/7 · Inglés y español · Precios fijos en US$
+    - region [ref=f12e572]:
+      - generic [ref=f12e573]:
+        - heading [level=2] [ref=f12e575]:
+          - text: Contacta a JuniorMartínez
+          - emphasis [ref=f12e576]: Transfer
+        - generic [ref=f12e577]:
+          - generic [ref=f12e578]:
+            - link "WhatsApp +1 (829) 299-1661 La forma más rápida de reservar — normalmente contesta en minutos" [ref=f12e579] [cursor=pointer]:
+              - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Tengo%20una%20pregunta%20sobre%20un%20traslado.
+              - generic [ref=f12e583]:
+                - generic [ref=f12e584]: WhatsApp
+                - generic [ref=f12e585]: +1 (829) 299-1661
+                - emphasis [ref=f12e586]: La forma más rápida de reservar — normalmente contesta en minutos
+            - link "Teléfono +1 (829) 299-1661 Llama directamente si prefieres hablar" [ref=f12e587] [cursor=pointer]:
+              - /url: tel:+18292991661
+              - generic [ref=f12e591]:
+                - generic [ref=f12e592]: Teléfono
+                - generic [ref=f12e593]: +1 (829) 299-1661
+                - emphasis [ref=f12e594]: Llama directamente si prefieres hablar
+            - link "Correo info@juniormartineztransfer.com Para facturas, reservas de grupo y aliados de villas" [ref=f12e595] [cursor=pointer]:
+              - /url: mailto:info@juniormartineztransfer.com
+              - generic [ref=f12e599]:
+                - generic [ref=f12e600]: Correo
+                - generic [ref=f12e601]: info@juniormartineztransfer.com
+                - emphasis [ref=f12e602]: Para facturas, reservas de grupo y aliados de villas
+            - generic [ref=f12e607]:
+              - generic [ref=f12e608]: Horario
+              - generic [ref=f12e609]: 24 horas, 7 días a la semana
+              - emphasis [ref=f12e610]: Incluyendo feriados, vuelos nocturnos y salidas a las 4am
+            - generic [ref=f12e615]:
+              - generic [ref=f12e616]: Área de servicio
+              - generic [ref=f12e617]: Sosúa · Cabarete · Puerto Plata · POP
+              - emphasis [ref=f12e618]: Con base en Sosúa, cubriendo toda la Costa Norte y todo el país a solicitud
+          - generic [ref=f12e619]:
+            - iframe [ref=f12e620]
+            - generic [ref=f12e621]:
+              - generic [ref=f12e622]: Sosúa, Puerto Plata
+              - generic [ref=f12e623]: Dominican Republic
+  - contentinfo [ref=f12e624]:
+    - generic [ref=f12e625]:
+      - generic [ref=f12e626]:
+        - link "Junior Martinez Transfer y Taxi · Sosúa" [ref=f12e627] [cursor=pointer]:
+          - /url: "#top"
+          - generic [ref=f12e633]:
+            - strong [ref=f12e634]: Junior Martinez
+            - generic [ref=f12e635]: Transfer y Taxi · Sosúa
+        - paragraph [ref=f12e636]: Servicio privado de taxi y traslados al aeropuerto con base en Sosúa, República Dominicana. Precios fijos, choferes con licencia, vehículos con aire acondicionado y un número de WhatsApp que siempre responde.
+        - link "Reservar por WhatsApp" [ref=f12e637] [cursor=pointer]:
+          - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Me%20gustar%C3%ADa%20reservar%20un%20traslado.
+      - navigation [ref=f12e641]:
+        - heading "Servicios" [level=3] [ref=f12e642]
+        - link "Traslados al aeropuerto" [ref=f12e643] [cursor=pointer]:
+          - /url: "#services"
+        - link "Taxi privado" [ref=f12e644] [cursor=pointer]:
+          - /url: "#services"
+        - link "Hoteles y villas" [ref=f12e645] [cursor=pointer]:
+          - /url: "#services"
+        - link "Excursiones" [ref=f12e646] [cursor=pointer]:
+          - /url: "#services"
+        - link "VIP y chofer por hora" [ref=f12e647] [cursor=pointer]:
+          - /url: "#services"
+        - link "Larga distancia" [ref=f12e648] [cursor=pointer]:
+          - /url: "#services"
+      - navigation [ref=f12e649]:
+        - heading "Destinos" [level=3] [ref=f12e650]
+        - link "Puerto Plata Airport (POP)" [ref=f12e651] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Sosúa" [ref=f12e652] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Cabarete" [ref=f12e653] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Puerto Plata" [ref=f12e654] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Cofresí" [ref=f12e655] [cursor=pointer]:
+          - /url: "#destinations"
+        - link "Río San Juan" [ref=f12e656] [cursor=pointer]:
+          - /url: "#destinations"
+      - generic [ref=f12e657]:
+        - heading "Contacto" [level=3] [ref=f12e658]
+        - link "+1 (829) 299-1661" [ref=f12e659] [cursor=pointer]:
+          - /url: tel:+18292991661
+        - link "info@juniormartineztransfer.com" [ref=f12e660] [cursor=pointer]:
+          - /url: mailto:info@juniormartineztransfer.com
+        - generic [ref=f12e661]: Sosúa, Puerto PlataRepública Dominicana
+        - generic [ref=f12e662]: Abierto 24 horas · 7 días
+    - generic [ref=f12e663]:
+      - paragraph [ref=f12e664]: © 2026 Junior Martinez Transfer. Todos los derechos reservados.
+      - paragraph [ref=f12e665]: Taxi Sosúa · Airport Transfer Puerto Plata · POP Airport Taxi · Taxi Cabarete · Private Driver Dominican Republic
+  - link "Book on WhatsApp":
+    - /url: https://wa.me/18292991661?text=%C2%A1Hola%20Junior!%20Me%20gustar%C3%ADa%20reservar%20un%20traslado.
+    - generic: Reservar por WhatsApp
