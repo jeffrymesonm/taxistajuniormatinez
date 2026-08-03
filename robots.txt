@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://juniormartineztransfer.com/sitemap.xml
+Sitemap: https://juniortransfertour.com/sitemap.xml

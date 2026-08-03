@@ -341,3 +341,54 @@ Files modified: `assets/css/styles.css`, `index.html` (cache version, now `v=13`
 
 By inspection: no undefined or unused custom properties, no HTML class without a rule,
 hero copy still width-constrained. Not seen rendered.
+
+---
+
+## 2026-08-03T20:10:00Z — Dominio juniortransfertour.com conectado a GitHub Pages
+
+### Requested
+
+El dominio mostraba "There isn't a GitHub Pages site here" (404) al abrir
+`https://juniortransfertour.com`.
+
+### Root cause
+
+El DNS ya era correcto (apex → `185.199.108-111.153`, `www` → `jeffrymesonm.github.io`)
+y Pages estaba construido, pero la API devolvía `"cname": null`: **el dominio nunca se
+registró en los ajustes de Pages del repositorio** y no existía archivo `CNAME`.
+
+GitHub enruta por cabecera `Host`. Sin ese registro no hay repositorio asociado al host,
+así que sirve la página 404 genérica. El DNS no era el problema.
+
+### Changed
+
+- Dominio personalizado fijado vía API en `jeffrymesonm/taxistajuniormatinez`.
+  GitHub creó `CNAME` en el repo (commit `7ae2b84`).
+- `https_enforced` activado una vez emitido el certificado Let's Encrypt.
+- Las 10 URLs del sitio apuntaban a `juniormartineztransfer.com`, un dominio que no
+  existe. Con el canonical en un host muerto Google no habría indexado nada. Sustituidas
+  por `juniortransfertour.com` en canonical, los tres `hreflang`, `og:url`, `og:image`,
+  `url` e `image` del JSON-LD, `robots.txt` y `sitemap.xml` (`lastmod` a 2026-08-03).
+
+Las direcciones de correo `info@juniormartineztransfer.com` **no se tocaron**: se
+desconoce si ese buzón existe. Ver pendientes.
+
+Files modified: `index.html`, `robots.txt`, `sitemap.xml`, `DOCS/DEPLOYMENT.md`.
+Files created (por GitHub): `CNAME`.
+
+### Verification
+
+    https://juniortransfertour.com/       → 200
+    https://www.juniortransfertour.com/   → 301 → apex, 200
+    http://juniortransfertour.com/        → 301 → https, 200
+    API: status=built cname=juniortransfertour.com https_enforced=true
+
+Cargado en navegador real: título correcto, página renderiza.
+
+### Pendientes detectados (no resueltos)
+
+- `assets/images/hero.jpg` y `assets/images/junior-driver.jpg` dan **404** en producción.
+  Son los dos únicos errores de consola. Ya figuraban en el checklist de salida.
+- Los correos siguen en `juniormartineztransfer.com`. Decidir si el buzón existe o si
+  deben pasar a `juniortransfertour.com` (`index.html` 728/730/801/829,
+  `assets/js/main.js:29`).

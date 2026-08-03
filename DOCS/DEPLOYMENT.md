@@ -1,10 +1,68 @@
 # Deployment
 
-_Last updated: 2026-07-27T21:52:00Z_
+_Last updated: 2026-08-03T20:10:00Z_
 
 Static site. No server, no database, no environment variables, no build command.
 
 ---
+
+## Deployment actual (en producción)
+
+| | |
+|---|---|
+| Host | GitHub Pages |
+| Repositorio | `jeffrymesonm/taxistajuniormatinez` |
+| Fuente | rama `main`, carpeta raíz `/` |
+| Dominio | **`juniortransfertour.com`** (apex) |
+| HTTPS | forzado, certificado Let's Encrypt gestionado por GitHub |
+
+`www` redirige al apex, y `http` redirige a `https`. Ambas cosas las hace GitHub solo.
+
+**Publicar un cambio = `git push` a `main`.** No hay build. Tarda ~1 minuto.
+
+### El archivo `CNAME` es obligatorio
+
+En la raíz del repo, con una sola línea:
+
+```
+juniortransfertour.com
+```
+
+Si ese archivo desaparece, GitHub olvida el dominio y el sitio vuelve a mostrar
+"There isn't a GitHub Pages site here". Nunca lo borres ni lo sobrescribas al subir
+archivos.
+
+### DNS (ya configurado, no tocar)
+
+| Tipo | Nombre | Valor |
+|------|--------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `jeffrymesonm.github.io` |
+
+### Si vuelve a salir el 404 de GitHub
+
+El DNS casi nunca es la causa. Comprueba primero que el dominio siga registrado:
+
+```bash
+gh api repos/jeffrymesonm/taxistajuniormatinez/pages --jq '.status, .cname, .https_enforced'
+```
+
+Si `cname` sale `null`, el dominio se desconectó. Vuelve a fijarlo:
+
+```bash
+gh api -X PUT repos/jeffrymesonm/taxistajuniormatinez/pages -f cname='juniortransfertour.com'
+```
+
+No pases `https_enforced` en esa misma llamada: mientras el certificado no exista, la
+API responde `The certificate does not exist yet` y no aplica nada. Actívalo después,
+cuando el certificado ya esté emitido.
+
+---
+
+## Alternativas (si algún día migras)
 
 ## Option 1 — Netlify Drop (fastest, no account setup)
 
@@ -36,10 +94,13 @@ Upload the contents of the folder into `public_html/`. That is the entire deploy
 - [ ] Every price in `RATES` confirmed against the current board
 - [ ] `La Romana` price confirmed (it was obscured in the source photo)
 - [ ] Sample testimonials replaced with real ones
-- [ ] Real email address set (currently `info@juniormartineztransfer.com`)
-- [ ] Domain replaced in `index.html` (canonical, hreflang, OG tags, JSON-LD),
-      `robots.txt` and `sitemap.xml` — search for `juniormartineztransfer.com`
-- [ ] HTTPS on and forced (all three hosts above do this automatically)
+- [ ] Real email address set — sigue en `info@juniormartineztransfer.com`, que **no**
+      coincide con el dominio real. Decidir si ese buzón existe o cambiarlo a
+      `juniortransfertour.com` en `index.html` (líneas 728, 730, 801, 829) y
+      `assets/js/main.js:29`
+- [x] Domain replaced in `index.html` (canonical, hreflang, OG tags, JSON-LD),
+      `robots.txt` and `sitemap.xml` → `juniortransfertour.com` _(2026-08-03)_
+- [x] HTTPS on and forced _(2026-08-03)_
 - [ ] WhatsApp button tested **on a real phone**, not just desktop
 - [ ] Google Business Profile claimed and linked to the site
 - [ ] `sitemap.xml` submitted in Google Search Console
