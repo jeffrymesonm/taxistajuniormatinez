@@ -5,23 +5,59 @@ file is missing**, falling back to built-in gradient art. Nothing ever shows a b
 image. Drop a real photo in with the exact filename below and it appears automatically —
 no code change needed.
 
-Shoot or source these 12 files. JPG, sRGB, quality ~72, keep each under 250 KB.
+JPG, sRGB, quality ~72, keep each under 250 KB.
 
-| Filename | Used in | Ideal size | What to shoot |
-|---|---|---|---|
-| `hero.jpg` | Hero background | 1920×1080 | The vehicle on the coastal highway, or Sosúa bay from the road. Landscape, action, room for text on the left. |
-| `junior-driver.jpg` | About section | 900×1125 (4:5) | **Junior himself**, beside the car, smiling, in daylight. This is the single highest-value photo on the page — travellers book the person. |
-| `pop-airport.jpg` | Destinations | 800×500 | POP arrivals hall or the terminal exterior. |
-| `sosua.jpg` | Destinations | 800×500 | Sosúa Bay or Playa Alicia. |
-| `cabarete.jpg` | Destinations | 800×500 | Kitesurfers over Cabarete beach. |
-| `puerto-plata.jpg` | Destinations | 800×500 | The Malecón, Fort San Felipe, or the cable car. |
-| `cofresi.jpg` | Destinations | 800×500 | Cofresí beach or the Costambar coastline. |
-| `rio-san-juan.jpg` | Destinations | 800×500 | Laguna Gri-Gri or Playa Caletón. |
-| `gaspar-hernandez.jpg` | Destinations | 800×500 | Playa Magante / the coast road east. |
-| `punta-rucia.jpg` | Destinations | 800×500 | Cayo Arena sandbank. |
-| `santiago.jpg` | Destinations | 800×500 | Monumento a los Héroes. |
-| `fleet-sedan.jpg` `fleet-suv.jpg` `fleet-minivan.jpg` `fleet-interior.jpg` `fleet-luggage.jpg` `fleet-meet.jpg` | Fleet gallery | 800×600 (4:3) | The actual vehicles, clean, in good light. Interior shot with the A/C vents visible. One of Junior holding a name sign in arrivals. |
-| `og-cover.jpg` | Social sharing preview | 1200×630 | The best hero-style shot with the vehicle. This is what appears when the link is pasted into WhatsApp or Facebook. |
+## Filled (2026-08-06, from client-supplied WhatsApp photos)
+
+| Filename | Used in | Source |
+|---|---|---|
+| `hero.jpg` | Hero background | Aerial shot of the Toyota Sienna in a tropical driveway. Cropped 16:9. |
+| `og-cover.jpg` | Social sharing preview | The Sienna parked beside a "TAXI" booth, street-level — clearest single frame for a link preview. Cropped ~1.9:1. |
+| `junior-driver.jpg` | About section | Selfie of Junior in his yellow "Taxi S/C & A" polo. Night shot, tight crop — not the ideal "beside the car, daylight" brief below, but it's the only real photo of him on file. Replace with a proper daylight portrait when available. |
+| `sosua.jpg` | Destinations | The "SOSÚA" landmark sign. Cropped 800×500 around the sign. |
+| `cabarete.jpg` | Destinations | Kitesurfers over Cabarete beach. Source was `.webp` — converted to JPEG. Polished/professional-looking shot; **source/rights unconfirmed**, see note below. |
+| `puerto-plata.jpg` | Destinations | The Christ statue atop Pico Isabel de Torres (cable car), city and bay below. |
+| `cofresi.jpg` | Destinations | Cofresí beach with the Costambar coastline. |
+| `rio-san-juan.jpg` | Destinations | Laguna Gri-Gri — boats on the lagoon. |
+| `punta-rucia.jpg` | Destinations | Aerial of the Cayo Arena sandbank. Polished/professional-looking aerial shot; **source/rights unconfirmed**, see note below. |
+| `santiago.jpg` | Destinations | Monumento a los Héroes de la Restauración. |
+| `pop-airport.jpg` | Destinations | The Aerodom plane monument at the Gregorio Luperón International Airport entrance sign. |
+
+**Source/rights note (2026-08-06):** `cabarete.jpg` and `punta-rucia.jpg` look like
+professional or stock photography rather than personal snapshots — polished framing,
+drone-quality aerial in the Punta Rucía shot. The site's own rule below exists because
+copied photos are a legal risk. Confirm with the client that these are their own photos
+or properly licensed before this goes live; swap for a personal photo otherwise.
+
+## Still open (gradient placeholder until filled)
+
+None. Every `<img>` slot referenced in `index.html` — hero, driver, all 9 destination
+cards, og-cover, and the 6-photo excursions gallery — has a real photo as of
+2026-08-06.
+
+`gaspar-hernandez.jpg` and the `fleet-*.jpg` set listed in earlier revisions of this file
+are not referenced by any `<img>` in `index.html` — there is no fleet gallery section on
+the page currently, so those filenames do nothing if added. Ignore them unless that
+section gets built.
+
+## Excursions gallery (added 2026-08-06)
+
+`index.html` has an `#excursions` section (six `.frame.frame--wide` tiles, 4:3) that
+backs the "Excursions & Day Trips" service with real trip photos. Filled from the
+client's buggy/ATV excursion photos:
+
+| Filename | Caption |
+|---|---|
+| `excursion-buggy-splash.jpg` | Buggy safari · off-road trails |
+| `excursion-buggy-family.jpg` | Family buggy tour |
+| `excursion-atv-convoy.jpg` | ATV convoy · jungle roads |
+| `excursion-buggy-mud.jpg` | Mud pit crossing |
+| `excursion-buggy-river.jpg` | River crossing |
+| `excursion-atv-group.jpg` | Group ATV excursion |
+
+Same rules as above: JPG, ~72 quality, 4:3, under 250 KB. Swap any of these by keeping
+the filename — no code change needed. Captions live in `assets/js/i18n.js` under the
+`xgal.*` keys (English is in `index.html` directly).
 
 ## Rules
 

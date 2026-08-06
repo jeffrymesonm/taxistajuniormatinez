@@ -581,6 +581,7 @@ p + p { margin-top: 1rem; }
   background: var(--ink); box-shadow: var(--sh-2);
 }
 .frame--tall { aspect-ratio: 4 / 5; }
+.frame--wide { aspect-ratio: 4 / 3; }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
 .frame figcaption {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4rem 1.2rem .95rem;
@@ -774,6 +775,12 @@ p + p { margin-top: 1rem; }
   .dest:hover .dest__media img { transform: scale(1.06); }
   .dest:hover .link { background: var(--brand-dark); }
 }
+
+/* --------------------------- EXCURSIONS GALLERY -------------------------- */
+.xgal { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; margin-bottom: 2rem; }
+@media (min-width: 620px) { .xgal { gap: 1.2rem; } }
+@media (min-width: 1000px) { .xgal { grid-template-columns: repeat(3, 1fr); } }
+.xgal__cta { margin-inline: auto; }
 
 /* ------------------------------ 9. REVIEWS ------------------------------ */
 .reviews { display: grid; grid-template-columns: repeat(2, 1fr); gap: .6rem; }

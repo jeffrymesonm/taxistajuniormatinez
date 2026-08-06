@@ -84,6 +84,17 @@
     'srv.6.r':  'Desde <b>US$100</b> · Santiago y más allá',
     'srv.6.a':  'Cotizar larga distancia',
 
+    /* ---- Excursions gallery ---- */
+    'xgal.h2':  'Excursiones reales,<br><em>barro real</em>',
+    'xgal.sub': 'Junior organiza días de buggy y ATV por el campo — estos son viajes recientes que ha llevado a sus huéspedes.',
+    'xgal.1':   'Safari en buggy · trillos todoterreno',
+    'xgal.2':   'Tour familiar en buggy',
+    'xgal.3':   'Convoy de ATV · caminos de monte',
+    'xgal.4':   'Cruce de barrero',
+    'xgal.5':   'Cruce de río',
+    'xgal.6':   'Excursión grupal en ATV',
+    'xgal.cta': 'Planear una excursión',
+
     /* ---- CTA bands ---- */
     'cta1.h': '¿Aún lo estás pensando? Pregunta el precio.',
     'cta1.p': 'Envía tu fecha, número de vuelo y destino. Junior responde con un total fijo, normalmente en minutos.',

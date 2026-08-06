@@ -1,6 +1,6 @@
 # Folder structure
 
-_Last updated: 2026-07-27T21:52:00Z_
+_Last updated: 2026-08-06T13:00:00Z_
 
 ```
 taxista/
@@ -8,6 +8,11 @@ taxista/
 ├── robots.txt                  Crawler rules, points at the sitemap.
 ├── sitemap.xml                 One URL. Update lastmod when content changes.
 ├── README.md                   Start here. Pre-launch checklist.
+├── photos/                     Raw, uncompressed source photos from the client
+│                                (WhatsApp exports). Git-ignored — contains identifiable
+│                                strangers (tourists, kids) with no documented consent to
+│                                publish. Never commit this folder. The cropped/compressed
+│                                photos actually used on the site live in assets/images/.
 │
 ├── assets/
 │   ├── css/
@@ -16,7 +21,7 @@ taxista/
 │   │   ├── i18n.js             Spanish dictionary + language switcher. Loads first.
 │   │   └── main.js             CONFIG, RATES and all behaviour. Loads second.
 │   └── images/
-│       └── README.md           The 16 photo slots, exact filenames and what to shoot.
+│       └── README.md           Photo slots, exact filenames and what to shoot/what's filled.
 │                               Drop .jpg files beside this file; they appear automatically.
 │
 ├── DOCS/

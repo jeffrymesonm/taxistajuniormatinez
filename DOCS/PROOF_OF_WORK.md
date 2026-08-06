@@ -392,3 +392,138 @@ Cargado en navegador real: título correcto, página renderiza.
 - Los correos siguen en `juniormartineztransfer.com`. Decidir si el buzón existe o si
   deben pasar a `juniortransfertour.com` (`index.html` 728/730/801/829,
   `assets/js/main.js:29`).
+
+---
+
+## 2026-08-06T13:00:00Z — Fotos reales del cliente + galería de excursiones
+
+### Requested
+
+El cliente creó una carpeta `photos/` con 20 fotos exportadas de WhatsApp y pidió
+usarlas "de acorde a lo que son en la página".
+
+### Hallazgo antes de tocar código
+
+Solo 5 de las 20 fotos correspondían a huecos de imagen ya existentes en la página
+(2 exteriores del vehículo, 1 interior, 1 selfie del conductor, 1 del letrero "SOSÚA").
+Las otras 15 eran fotos de acción de excursiones en buggy/ATV — sin encaje en ningún
+`<img>` existente, pero tampoco ajenas al negocio: la página ya anuncia un servicio
+"Excursions & Day Trips" (`srv.4`) que no tenía ninguna foto en ningún lado.
+
+Se resolvió con el cliente antes de escribir código (`AskUserQuestion`):
+1. Construir una galería nueva de excursiones junto al servicio existente, en vez de
+   descartar las 15 fotos o ignorarlas.
+2. Usar el selfie nocturno del conductor en `junior-driver.jpg` de todos modos, aunque
+   no cumple el brief original ("junto al carro, de día") — es la única foto real de
+   Junior disponible.
+
+### Procesamiento de imágenes
+
+Sin ImageMagick ni Python/PIL disponibles en el entorno; se escribió una función
+PowerShell (`Process-Image`, ver sesión) sobre `System.Drawing` que recorta al aspect
+ratio exacto de cada slot, nunca hace upscale del recorte, y comprime a JPEG calidad
+~72–76. Cada crop se verificó visualmente (Read de la imagen resultante) antes de
+aceptarlo — el primer intento de `excursion-atv-group.jpg` con anclaje superior salió
+solo cielo y árboles; se corrigió anclando el recorte al borde inferior de la foto
+origen, donde estaban los ATV.
+
+### Changed
+
+**Slots existentes rellenados** (antes 404 en producción, ver pendiente de la entrada
+anterior):
+- `hero.jpg`, `og-cover.jpg`, `sosua.jpg`, `junior-driver.jpg`
+
+**Sección nueva** `#excursions` en `index.html`, entre "Services" y el primer CTA band:
+galería de 6 fotos (`.frame.frame--wide`, aspect 4:3, mismo patrón visual que
+`about__art`/`.frame--tall`) + botón WhatsApp reutilizando el mensaje de `srv.4`.
+
+**CSS**: `.frame--wide` (modificador de aspect-ratio) y `.xgal` (grid 2/3 columnas,
+mismo patrón que `.dests`/`.cards`) — sin duplicar reglas existentes de `.frame`.
+
+**i18n**: 9 claves nuevas `xgal.*` en `assets/js/i18n.js` (español). Inglés vive
+directo en `index.html` como en el resto del sitio.
+
+**Privacidad**: las 20 fotos originales sin recortar incluyen turistas identificables
+(caras, niños) sin consentimiento documentado para publicación — solo las 6 fotos de
+excursión efectivamente usadas se comprimieron/recortaron a `assets/images/`. Se agregó
+`photos/` a `.gitignore` para que la carpeta cruda nunca se suba al repo público.
+
+Files modified: `index.html` (sección + cache `v=14`), `assets/css/styles.css`,
+`assets/js/i18n.js`, `assets/images/README.md`, `PROJECT_INFO.md`,
+`DOCS/FOLDER_STRUCTURE.md`, `.gitignore`.
+Files created: `assets/images/{hero,og-cover,sosua,junior-driver}.jpg`,
+`assets/images/excursion-{buggy-splash,buggy-family,atv-convoy,buggy-mud,buggy-river,atv-group}.jpg`.
+Files deleted: none. `photos/` (20 originales) creada por el cliente, no versionada.
+
+### Verification (Playwright, Chromium — instalado en esta sesión vía `npx playwright install`)
+
+Servido con `python -m http.server 8000`.
+
+- Consola: sin errores nuevos. Los únicos `console.error` son 404 de los 7 slots de
+  destino que siguen sin foto (`pop-airport.jpg`, `cabarete.jpg`, etc.) — comportamiento
+  esperado y documentado, no un defecto de esta sesión.
+- Sección `#excursions` renderiza correctamente en inglés y en español: grid 3×2 en
+  desktop, captions legibles sobre el gradiente, botón CTA presente (`.xgal__cta`,
+  247×57px) con el texto correcto en ambos idiomas.
+- Hero, About (foto de Junior) y Destinations verificados por captura de pantalla —
+  sin regresión visual en las secciones no tocadas.
+- `hero.jpg`, `og-cover.jpg`, `sosua.jpg`, `junior-driver.jpg` ya no dan 404 — el
+  pendiente de la entrada 2026-08-03 queda resuelto.
+
+### Deliberately not done
+
+- Los 7 destinos sin foto (POP, Cabarete, Puerto Plata, Cofresí, Río San Juan, Punta
+  Rucía, Santiago) se dejaron con el gradiente placeholder — ninguna de las 20 fotos
+  del cliente correspondía a esos lugares y no se usó fotografía de stock.
+- La foto de playa con cruceros de fondo (posible Amber Cove, Puerto Plata) no se usó
+  en ningún lado: la ubicación no se pudo confirmar con certeza y no encajaba con
+  ningún destino específico del listado.
+- No se tocó el enlace del footer "Excursions" (sigue apuntando a `#services`) para no
+  romper el patrón: los otros cinco enlaces de esa columna también apuntan a
+  `#services` genéricamente.
+
+### Adenda misma sesión — 6 fotos de destinos añadidas por el cliente
+
+El cliente agregó 6 fotos más a `photos/` ya nombradas por destino: `cabarete.webp`,
+`cofresi.jpg`, `puerto plata.jpg`, `punta rucia.jpg`, `rio san juan.jpg`, `santiago.jpg`.
+Contenido verificado correcto para cada slot (kitesurf en Cabarete, el Cristo de Pico
+Isabel de Torres para Puerto Plata, Laguna Gri-Grí para Río San Juan, Cayo Arena para
+Punta Rucía, el Monumento a los Héroes para Santiago, la playa de Cofresí).
+
+`cabarete.webp` no lo pudo decodificar `System.Drawing` (GDI+ no trae códec WebP) —
+se instaló `sharp` vía npm en el scratchpad para decodificar y recortar las 6 fotos a
+800×500. Como los 6 archivos de salida usan exactamente los nombres que `index.html`
+ya referencia, no hizo falta tocar código: aparecieron automáticamente.
+
+**Pendiente para el cliente**: `cabarete.jpg` y `punta-rucia.jpg` tienen aspecto de
+fotografía profesional/stock (encuadre muy pulido, la de Punta Rucía es una aérea tipo
+dron) en vez de foto personal — contrario a la regla que el propio
+`assets/images/README.md` establece ("no fotos de stock, riesgo legal real"). No se
+puede confirmar autoría solo viendo el archivo. Documentado en ese README; falta que el
+cliente confirme que son suyas o con licencia antes de publicar.
+
+Files created: `assets/images/{cabarete,cofresi,puerto-plata,punta-rucia,rio-san-juan,santiago}.jpg`.
+Files modified: `assets/images/README.md`, `PROJECT_INFO.md`.
+
+### Verification
+
+Playwright/Chromium contra `python -m http.server 8000`: sección `#destinations`
+renderiza las 6 fotos nuevas correctamente sobre el gradiente de legibilidad existente;
+único `console.error` restante es el 404 esperado de `pop-airport.jpg`.
+
+### Adenda 2 misma sesión — foto del aeropuerto (POP)
+
+El cliente agregó `photos/aeropuerto puerto plata.jpg` (el cartel de entrada del
+Aeropuerto Internacional Gregorio Luperón, con el avión-monumento de Aerodom). Recortada
+800×500 con `sharp` → `assets/images/pop-airport.jpg`. Con esto los **9 destinos** y
+los 4 slots núcleo quedan completos — no queda ningún `<img>` de `index.html` sin foto
+real.
+
+Files created: `assets/images/pop-airport.jpg`.
+Files modified: `assets/images/README.md`, `PROJECT_INFO.md`.
+
+### Verification
+
+Playwright/Chromium: `console --errors` en la sección `#destinations` da **cero**
+entradas (antes había un 404 por `pop-airport.jpg`). Captura de las 9 tarjetas
+confirmando cada foto en su lugar correcto.

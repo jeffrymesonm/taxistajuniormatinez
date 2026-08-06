@@ -1,6 +1,6 @@
 # PROJECT_INFO
 
-_Last updated: 2026-07-28T14:20:00Z_
+_Last updated: 2026-08-06T13:00:00Z_
 
 | Field | Value |
 |---|---|
@@ -24,5 +24,5 @@ _Last updated: 2026-07-28T14:20:00Z_
 | Price data | `assets/js/main.js` → `RATES` (54 destinations, US$, 1–6 pax, from Sosúa) |
 | Design reference | travelexpress.ae — Epilogue/DM Sans, #FF3600 accent, see `DOCS/DEVELOPER_GUIDE.md` |
 | Spanish copy | `assets/js/i18n.js` → `ES` |
-| Image slots | `assets/images/` — 16 files, see that folder's README |
-| Cache busting | `?v=N` on the CSS and JS links; currently `v=9`. **Bump on every change** — a stale `?v` silently serves the old file. |
+| Image slots | `assets/images/` — every `<img>` slot referenced in `index.html` is filled with a real photo (hero, driver, all 9 destinations, og-cover, 6-photo excursions gallery). See that folder's README. |
+| Cache busting | `?v=N` on the CSS and JS links; currently `v=14`. **Bump on every change** — a stale `?v` silently serves the old file. |

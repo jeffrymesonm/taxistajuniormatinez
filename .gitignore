@@ -1,3 +1,8 @@
 
 # Artefactos temporales del navegador (Playwright MCP)
 .playwright-mcp/
+
+# Fotos originales sin procesar (incluyen turistas identificables sin
+# consentimiento documentado para publicación). Las versiones recortadas y
+# comprimidas que sí se publican viven en assets/images/.
+photos/
