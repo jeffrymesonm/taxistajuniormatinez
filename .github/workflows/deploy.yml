@@ -1,0 +1,48 @@
+# Despliegue del sitio estatico a GitHub Pages.
+#
+# Sustituye al workflow "pages-build-deployment" que GitHub autogeneraba en modo
+# legacy (Pages sirviendo directo desde la rama). Aquel pipeline quedo atascado el
+# 2026-08-06 con runs en estado zombie irrecuperables, que no se pueden cancelar ni
+# borrar por API, y todo despliegue moria en "deployment_queued" tras 10 minutos.
+#
+# El sitio no tiene build: es HTML, CSS y JS planos. Aqui solo se empaqueta el repo
+# tal cual y se publica.
+name: Deploy site to Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permite relanzar a mano desde la pestana Actions
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un solo despliegue a la vez. cancel-in-progress descarta los que quedaron
+# colgados en lugar de esperarlos, que es justo lo que bloqueo el pipeline anterior.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
