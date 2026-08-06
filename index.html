@@ -46,7 +46,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400..800;1,400..800&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap">
 
-<link rel="stylesheet" href="assets/css/styles.css?v=14">
+<link rel="stylesheet" href="assets/css/styles.css?v=15">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23040401'/><path d='M9 21h14M9 21a2 2 0 1 0 4 0M19 21a2 2 0 1 0 4 0' stroke='%23FF3600' stroke-width='2' fill='none' stroke-linecap='round'/><path d='M8 17l1.8-4.6A2 2 0 0 1 11.7 11h8.6a2 2 0 0 1 1.9 1.4L24 17z' fill='%23FF6060'/></svg>">
 </head>
 <body>
@@ -116,7 +116,16 @@
   <!-- Backdrop: layered CSS/SVG "Amber Coast" scene. Drop assets/images/hero.jpg
        in place and it takes over automatically; if missing, the art below stands alone. -->
   <div class="hero__bg" aria-hidden="true">
-    <img class="hero__photo" src="assets/images/hero.jpg" alt="" loading="eager" fetchpriority="high" onerror="this.remove()">
+    <!-- Dos recortes de la misma foto. El hero copia la forma del viewport, y con
+         un solo 16:9 el object-fit:cover de una pantalla vertical recortaba ~78%
+         del ancho: del vehiculo solo quedaba una franja. Se elige por FORMA del
+         viewport, no por ancho — un tablet vertical de 768px sufre lo mismo que un
+         telefono. Vertical (9:16, casi la proporcion de un telefono) para viewports
+         mas altos que anchos; 16:9 para los apaisados. -->
+    <picture>
+      <source media="(max-aspect-ratio: 1/1)" srcset="assets/images/hero-mobile.jpg" width="860" height="1530">
+      <img class="hero__photo" src="assets/images/hero.jpg" alt="" width="899" height="506" loading="eager" fetchpriority="high" onerror="this.remove()">
+    </picture>
     <svg class="hero__contours" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
       <g fill="none" stroke="#FF6060" stroke-linecap="round">
         <path d="M-40 540C220 470 340 560 560 500S900 360 1140 420s330 40 380 10" stroke-width="1.1" opacity=".40"/>
@@ -917,7 +926,7 @@
 }
 </script>
 
-<script src="assets/js/i18n.js?v=14" defer></script>
-<script src="assets/js/main.js?v=14" defer></script>
+<script src="assets/js/i18n.js?v=15" defer></script>
+<script src="assets/js/main.js?v=15" defer></script>
 </body>
 </html>

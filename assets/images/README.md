@@ -11,7 +11,8 @@ JPG, sRGB, quality ~72, keep each under 250 KB.
 
 | Filename | Used in | Source |
 |---|---|---|
-| `hero.jpg` | Hero background | Aerial shot of the Toyota Sienna in a tropical driveway. Cropped 16:9. |
+| `hero.jpg` | Hero background (landscape viewports) | Aerial shot of the Toyota Sienna in a tropical driveway. Cropped 16:9. |
+| `hero-mobile.jpg` | Hero background (portrait viewports) | Same source photo, kept in its native 9:16 portrait. See note below. |
 | `og-cover.jpg` | Social sharing preview | The Sienna parked beside a "TAXI" booth, street-level — clearest single frame for a link preview. Cropped ~1.9:1. |
 | `junior-driver.jpg` | About section | Selfie of Junior in his yellow "Taxi S/C & A" polo. Night shot, tight crop — not the ideal "beside the car, daylight" brief below, but it's the only real photo of him on file. Replace with a proper daylight portrait when available. |
 | `sosua.jpg` | Destinations | The "SOSÚA" landmark sign. Cropped 800×500 around the sign. |
@@ -22,6 +23,15 @@ JPG, sRGB, quality ~72, keep each under 250 KB.
 | `punta-rucia.jpg` | Destinations | Aerial of the Cayo Arena sandbank. Polished/professional-looking aerial shot; **source/rights unconfirmed**, see note below. |
 | `santiago.jpg` | Destinations | Monumento a los Héroes de la Restauración. |
 | `pop-airport.jpg` | Destinations | The Aerodom plane monument at the Gregorio Luperón International Airport entrance sign. |
+
+**The hero needs two crops.** The hero section copies the shape of the viewport: wide
+on a desktop, tall and narrow on a phone. `object-fit: cover` fills the box and throws
+away the rest, so a single 16:9 file loses ~78% of its width on a phone and the vehicle
+survives only as a strip. `index.html` therefore serves `hero-mobile.jpg` (9:16, close to
+a phone's own proportion) to any viewport taller than it is wide, and `hero.jpg` (16:9)
+to landscape ones. The switch is `<source media="(max-aspect-ratio: 1/1)">` — chosen by
+viewport *shape*, not width, because a 768px tablet held upright has the same problem as
+a phone. If you replace either file, keep its aspect ratio or the crop logic breaks.
 
 **Source/rights note (2026-08-06):** `cabarete.jpg` and `punta-rucia.jpg` look like
 professional or stock photography rather than personal snapshots — polished framing,

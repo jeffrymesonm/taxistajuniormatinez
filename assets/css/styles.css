@@ -564,6 +564,15 @@ p + p { margin-top: 1rem; }
   transition-duration: 140ms;
 }
 .fare__go { grid-column: 1 / -1; width: 100%; }
+/* Below 720px this pill spans the full column. The detached badge is painted
+   outside the button (left: 100%), so at full width it lands past the right edge
+   of the screen and gets clipped — the same reason .btn--block drops it. Dropped
+   here too, along with the margin that was reserving room for it. Above 720px the
+   button goes back to auto width and the badge fits, so this is scoped to mobile. */
+@media (max-width: 719px) {
+  .fare__go { margin-right: 0; }
+  .fare__go::after { display: none; }
+}
 
 .fare__note { margin-top: .9rem; font-size: .78rem; line-height: 1.5; color: rgba(255,255,255,.5); }
 

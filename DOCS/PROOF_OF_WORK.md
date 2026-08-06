@@ -527,3 +527,80 @@ Files modified: `assets/images/README.md`, `PROJECT_INFO.md`.
 Playwright/Chromium: `console --errors` en la sección `#destinations` da **cero**
 entradas (antes había un 404 por `pop-airport.jpg`). Captura de las 9 tarjetas
 confirmando cada foto en su lugar correcto.
+
+---
+
+## 2026-08-06T20:10:00Z — Hero recortado en móvil y botón del hero fuera de pantalla
+
+### Requested
+
+Dos reportes del cliente con capturas de móvil: "la foto de hero no se ve completa en
+version movil" y "el segundo boton se pierde en version movil".
+
+### 1. Hero: una sola foto no sirve para las dos formas
+
+`hero.jpg` era 899×506 (16:9). El hero copia la forma del viewport, así que en un
+teléfono el contenedor queda alto y estrecho (390×991 ≈ 0.39). Con `object-fit: cover`
+el navegador escala para cubrir la altura y recorta el ancho: **solo sobrevivía ~22%**
+del ancho de la foto, del vehículo quedaba una franja.
+
+La foto original es 899×1599 — **vertical, 9:16**, casi la proporción exacta de un
+teléfono. Se generó `hero-mobile.jpg` (860×1530, 154 KB) desde ese original y se sirve
+con `<picture>`.
+
+El selector es **`(max-aspect-ratio: 1/1)`, no un ancho**: un tablet vertical de 768px
+tiene un contenedor casi cuadrado (768×746) y sufría exactamente el mismo recorte
+extremo que un teléfono. Un corte por ancho lo habría dejado fuera.
+
+| Viewport | Antes | Después |
+|---|---|---|
+| 360×740 | 22% del ancho visible | **63%** |
+| 390×844 | 22% | **70%** |
+| 768×1024 (tablet vertical) | 58% | **100%** |
+| 1400×900 (escritorio) | 93% | 93% (sin cambio) |
+
+### 2. Botón: `width: 100%` contra una insignia dibujada fuera del botón
+
+`.btn` reserva sitio para su insignia circular con
+`margin-right: calc(var(--badge) + .3rem)`, y la pinta en `::after` con `left: 100%`,
+es decir **fuera** de la caja del botón. `.fare__go` es `width: 100%` por debajo de
+720px: ancho completo + insignia por fuera = la insignia caía pasado el borde derecho
+de la pantalla y se veía cortada.
+
+El CSS ya resolvía esto para otro botón vía `.btn--block` (`margin-right: 0` +
+`::after { display: none }`), pero `.fare__go` no lo usaba. Se aplicó el mismo
+tratamiento **scoped a `max-width: 719px`**: por encima de 720px el botón vuelve a
+`width: auto`, la insignia cabe y debe conservarse.
+
+Auditado el resto: `.fare__go` era el único `width: 100%` sin `btn--block`.
+
+### Files modified
+
+```
+index.html                  <picture> en el hero, cache v=14 -> v=15
+assets/css/styles.css       media query max-width:719px para .fare__go
+assets/images/README.md     hero-mobile.jpg documentado + por que hacen falta dos recortes
+DOCS/PROOF_OF_WORK.md       esta entrada
+```
+
+Files created: `assets/images/hero-mobile.jpg`. Files deleted: none.
+
+### Verification (Playwright/Chromium, 4 viewports, DPR 2)
+
+- **Imagen servida correcta** en cada forma: `hero-mobile.jpg` en 360/390/768 vertical,
+  `hero.jpg` en 1400×900 apaisado.
+- **`.fare__go`**: en 360 y 390 la insignia queda en `display:none`, `margin-right:0`,
+  borde derecho 342/372 — dentro del viewport. En 768 y 1400 sigue en `display:block`
+  con su margen de 51.2px, sin regresión.
+- **Sin desbordamiento horizontal** en ninguno de los 4 anchos (`scrollWidth ==
+  clientWidth`). Los 8 elementos que sí cruzan el borde son los `<path>` del SVG
+  decorativo `.hero__contours`, que usa `preserveAspectRatio="slice"` y está recortado
+  por el `overflow:hidden` del hero — intencional, no genera scroll.
+- Consola sin errores. `node --check` pasa en ambos JS.
+
+### Nota de despliegue
+
+Estos cambios **no están publicados**: GitHub declaró una incidencia crítica en Actions
+y Pages el 2026-08-06T15:22Z que deja los jobs en `queued` sin runner, así que ningún
+despliegue completa. El sitio en vivo sigue sirviendo el build del 3-ago. Todo queda
+commiteado esperando a que GitHub recupere.
