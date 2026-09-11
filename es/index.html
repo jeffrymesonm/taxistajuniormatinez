@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     Junior Martinez Transfer — single-page marketing site
+     Purpose: convert North Coast travellers into WhatsApp bookings.
+
+     · Contact details live in ONE place: assets/js/main.js → CONFIG
+     · Prices live in ONE place:          assets/js/main.js → RATES
+     · Spanish copy lives in ONE place:   assets/js/i18n.js
+       English is the source of truth and stays in this file.
+     ============================================================ -->
+
+<title>Taxi Sosúa y Traslados Aeropuerto Puerto Plata (POP) 24/7</title>
+<meta name="description" content="Taxi privado en Sosúa y traslados al aeropuerto de Puerto Plata (POP). Precios fijos, choferes con licencia, vehículos con A/A. Reserva por WhatsApp 24/7.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://juniortransfertour.com/es/">
+<link rel="alternate" hreflang="en" href="https://juniortransfertour.com/">
+<link rel="alternate" hreflang="es" href="https://juniortransfertour.com/es/">
+<link rel="alternate" hreflang="x-default" href="https://juniortransfertour.com/">
+<meta name="theme-color" content="#FF3600">
+<meta name="geo.region" content="DO-18">
+<meta name="geo.placename" content="Sosúa, Puerto Plata, Dominican Republic">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Junior Martinez Transfers &amp; Tours">
+<meta property="og:locale" content="es_DO">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://juniortransfertour.com/es/">
+<meta property="og:title" content="Junior Martinez Transfers &amp; Tours — Taxi Sosúa &amp; POP Airport Transfers">
+<meta property="og:description" content="Safe, punctual private transfers on the North Coast. Puerto Plata Airport (POP), Sosúa, Cabarete and beyond. Fixed prices. Book in 60 seconds on WhatsApp.">
+<meta property="og:image" content="https://juniortransfertour.com/assets/images/og-cover.jpg">
+<meta property="og:image:alt" content="Junior Martinez Transfers &amp; Tours private vehicle on the Dominican North Coast highway">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Junior Martinez Transfers &amp; Tours — Taxi Sosúa &amp; POP Airport Transfers">
+<meta name="twitter:description" content="Fixed-price private transfers from Puerto Plata Airport to Sosúa, Cabarete and the whole North Coast. Book on WhatsApp, 24/7.">
+
+<!-- Fonts: Epilogue for headings, DM Sans for everything else — the pairing used
+     by the reference design. Weights are requested as ranges so both arrive as
+     variable fonts: two files, every weight. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400..800;1,400..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&amp;display=swap">
+
+<link rel="stylesheet" href="/assets/css/styles.css?v=15">
+<link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='7' fill='%23040401'/&gt;&lt;path d='M9 21h14M9 21a2 2 0 1 0 4 0M19 21a2 2 0 1 0 4 0' stroke='%23FF3600' stroke-width='2' fill='none' stroke-linecap='round'/&gt;&lt;path d='M8 17l1.8-4.6A2 2 0 0 1 11.7 11h8.6a2 2 0 0 1 1.9 1.4L24 17z' fill='%23FF6060'/&gt;&lt;/svg&gt;">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="skip">Ir al contenido</a>
+
+<!-- ============ ICON SPRITE (inline: zero extra requests) ============ -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"></path><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"></path></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M10.2 13.8 3 11.4l1.6-1.6 3.9.6 3.1-3.1L4.9 4l1.9-1.9 9.6 1.9 2.6-2.6a2 2 0 0 1 2.8 2.8l-2.6 2.6 1.9 9.6L19.2 20l-3.3-6.7-3.1 3.1.6 3.9L11.8 22z"></path></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 14h18M4.5 14l1.9-5.4A3 3 0 0 1 9.2 6.6h5.6a3 3 0 0 1 2.8 2L19.5 14M5 14v3.4M19 14v3.4M4 17.4h3M17 17.4h3"></path><circle cx="7.2" cy="17.6" r="1.6" fill="none" stroke="currentColor" stroke-width="1.7"></circle><circle cx="16.8" cy="17.6" r="1.6" fill="none" stroke="currentColor" stroke-width="1.7"></circle></symbol>
+  <symbol id="i-hotel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V6.5a1.5 1.5 0 0 1 1.5-1.5h11A1.5 1.5 0 0 1 19 6.5V21M9 9h2M13 9h2M9 13h2M13 13h2M10.5 21v-3.5h3V21"></path></symbol>
+  <symbol id="i-palm" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21c0-5 .6-8.5 1.6-11M13.6 10C11 7.7 7.4 7.9 5 10.5M13.6 10c.6-3.4 3.4-5.8 6.8-5.6M13.6 10c-2.8-2-3.4-5.6-1.4-8.3M13.6 10c3.4.4 5.9 3 6.2 6.4M8 21h9"></path></symbol>
+  <symbol id="i-crown" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M4.5 15 3 7l5 3.2L12 4l4 6.2L21 7l-1.5 8z"></path></symbol>
+  <symbol id="i-road" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M6 3 3 21M18 3l3 18M12 3v3M12 10.5v3M12 18v3"></path></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 2.5 4.5 5.5v6c0 4.6 3.1 8.6 7.5 10 4.4-1.4 7.5-5.4 7.5-10v-6z"></path><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m8.8 12 2.2 2.2 4.2-4.4"></path></symbol>
+  <symbol id="i-seat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M6 4h7a3 3 0 0 1 3 3v7H9a3 3 0 0 1-3-3zM6 14v6M6 20h11a3 3 0 0 0 3-3v-3"></path></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 7v5.3l3.4 2"></path></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1a1 1 0 0 1 .7.3l7.4 7.4a1 1 0 0 1 0 1.4l-8.1 8.1a1 1 0 0 1-1.4 0L3.8 13.3a1 1 0 0 1-.3-.7z"></path><circle cx="8" cy="8" r="1.5" fill="currentColor"></circle></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"></circle><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" d="M3 12h18M12 3c2.4 2.5 3.6 5.5 3.6 9S14.4 18.5 12 21c-2.4-2.5-3.6-5.5-3.6-9S9.6 5.5 12 3z"></path></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"></path></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M21 16.4v2.6a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.3 19.3 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6A2 2 0 0 1 3.3 1h2.6a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L7 8.9a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1z"></path></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"></rect><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m3 6.5 9 6 9-6"></path></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21.5s7-6 7-11.5a7 7 0 1 0-14 0c0 5.5 7 11.5 7 11.5z"></path><circle cx="12" cy="10" r="2.6" fill="none" stroke="currentColor" stroke-width="1.7"></circle></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.6 2.9 5.9 6.5.9-4.7 4.6 1.1 6.4-5.8-3-5.8 3 1.1-6.4L2.6 9.4l6.5-.9z"></path></symbol>
+</svg>
+
+<!-- ==================== HEADER ==================== -->
+<header class="site-head" id="siteHead">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="#top" aria-label="Junior Martinez Transfers &amp; Tours — home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><text x="20" y="19" text-anchor="middle" dominant-baseline="central" fill="currentColor" font-family="Epilogue, Segoe UI, sans-serif" font-weight="800" font-size="17" letter-spacing="-1">JM</text><path d="M9 29.5c5-3 17-3 22 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" opacity=".55"></path><circle cx="31" cy="29.5" r="1.6" fill="currentColor"></circle></svg>
+      </span>
+      <span class="brand__text">
+        <strong>Junior Martinez</strong>
+        <span data-i18n="brand.tag">Transfer y Taxi · Sosúa</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services" data-i18n="nav.services">Servicios</a>
+      <a href="#destinations" data-i18n="nav.destinations">Destinos</a>
+      <a href="#quote" data-i18n="nav.quote">Cotizar</a>
+      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="site-head__cta">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang-btn="en" class="" aria-pressed="false" onclick="location.href='/'">EN</button>
+        <button type="button" data-lang-btn="es" aria-pressed="true" class="is-on">ES</button>
+      </div>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ==================== 1. HERO ==================== -->
+<section class="hero" aria-labelledby="hero-title">
+  <!-- Backdrop: layered CSS/SVG "Amber Coast" scene. Drop assets/images/hero.jpg
+       in place and it takes over automatically; if missing, the art below stands alone. -->
+  <div class="hero__bg" aria-hidden="true">
+    <!-- Dos recortes de la misma foto. El hero copia la forma del viewport, y con
+         un solo 16:9 el object-fit:cover de una pantalla vertical recortaba ~78%
+         del ancho: del vehiculo solo quedaba una franja. Se elige por FORMA del
+         viewport, no por ancho — un tablet vertical de 768px sufre lo mismo que un
+         telefono. Vertical (9:16, casi la proporcion de un telefono) para viewports
+         mas altos que anchos; 16:9 para los apaisados. -->
+    <picture>
+      <source media="(max-aspect-ratio: 1/1)" srcset="/assets/images/hero-mobile.jpg" width="860" height="1530">
+      <img class="hero__photo" src="/assets/images/hero.jpg" alt="Junior Martínez esperando con su taxi en la salida de llegadas del aeropuerto de Puerto Plata (POP), sosteniendo un cartel con el nombre del pasajero" width="899" height="506" loading="eager" fetchpriority="high" onerror="this.remove()">
+    </picture>
+    <svg class="hero__contours" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice">
+      <g fill="none" stroke="#FF6060" stroke-linecap="round">
+        <path d="M-40 540C220 470 340 560 560 500S900 360 1140 420s330 40 380 10" stroke-width="1.1" opacity=".40"></path>
+        <path d="M-40 592C230 520 350 612 570 552s340-142 580-82 330 40 380 10" stroke-width="1.1" opacity=".30"></path>
+        <path d="M-40 644C240 570 360 664 580 604s340-142 580-82 330 40 380 10" stroke-width="1.1" opacity=".22"></path>
+        <path d="M-40 488C210 420 330 508 550 448S890 306 1130 366s340 42 390 12" stroke-width="1.1" opacity=".28"></path>
+        <path d="M-40 436C200 372 320 456 540 396S880 254 1120 314s350 44 400 14" stroke-width="1.1" opacity=".18"></path>
+      </g>
+      <g fill="none" stroke="#FFB48A" opacity=".5">
+        <path d="M-40 516C215 445 335 534 555 474S895 333 1135 393s335 41 385 11" stroke-width="1.4" stroke-dasharray="3 11"></path>
+      </g>
+    </svg>
+    <span class="hero__sun"></span>
+    <span class="hero__scrim"></span>
+  </div>
+
+  <div class="wrap">
+    <div class="hero__copy">
+      <h1 id="hero-title" data-anim="2" data-i18n-html="hero.h1">Taxi Sosúa y Traslados al Aeropuerto de Puerto Plata.<br><em>Llegas a POP. Alguien ya te espera.</em></h1>
+
+      <p class="hero__sub" data-anim="3" data-i18n="hero.sub">Junior Martínez ofrece traslados privados a precio fijo por toda la Costa Norte dominicana. Tu chofer monitorea tu vuelo, te recibe en llegadas con un cartel con tu nombre y te lleva a tu hotel o villa en un vehículo fresco y cómodo. Sin taxímetro. Sin regatear en el parqueo. Sin sorpresas.</p>
+    </div>
+
+    <!-- ===== SIGNATURE: the fare line ===== -->
+    <div class="fare" data-anim="4">
+      <div class="fare__head">
+        <span class="fare__label" data-i18n="fare.label">Arma tu viaje</span>
+        <span class="fare__pax" data-i18n="fare.pax">1–6 pasajeros · un precio por vehículo</span>
+      </div>
+
+      <div class="fare__route">
+        <label class="fare__field">
+          <span data-i18n="fare.pickup">Recogida</span>
+          <select id="fareFrom" aria-label="Pick-up location"></select>
+        </label>
+
+        <div class="fare__line" aria-hidden="true">
+          <span class="fare__track"></span>
+          <span class="fare__car" id="fareCar">
+            <svg viewBox="0 0 24 24"><use href="#i-car"></use></svg>
+          </span>
+        </div>
+
+        <label class="fare__field">
+          <span data-i18n="fare.dropoff">Destino</span>
+          <select id="fareTo" aria-label="Drop-off location"></select>
+        </label>
+      </div>
+
+      <div class="fare__readout" id="fareReadout" aria-live="polite">
+        <div class="fare__stat">
+          <span class="fare__stat-k" data-i18n="fare.time">Tiempo</span>
+          <span class="fare__stat-v" id="fareTime">≈ 15 min</span>
+        </div>
+        <div class="fare__stat fare__stat--price">
+          <span class="fare__stat-k" data-i18n="fare.price">Precio fijo</span>
+          <span class="fare__stat-v" id="farePrice">US$25</span>
+        </div>
+        <a class="btn btn--brand fare__go" id="fareGo">
+          <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+          <span>Book this ride</span>
+        </a>
+      </div>
+      <p class="fare__note" data-i18n="fare.note">Los precios son por vehículo para 1–6 personas, de día o de noche. Los tiempos son aproximados y dependen del tráfico. Envía tu número de vuelo y Junior te confirma el precio exacto por WhatsApp.</p>
+    </div>
+
+    <ul class="hero__proof" data-anim="5">
+      <li><svg class="ic" aria-hidden="true"><use href="#i-badge"></use></svg> <span data-i18n="hero.proof1">Con licencia y seguro</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-globe"></use></svg> <span data-i18n="hero.proof2">Inglés y español</span></li>
+      <li><svg class="ic" aria-hidden="true"><use href="#i-moon"></use></svg> <span data-i18n="hero.proof3">24/7, todos los vuelos</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== 2. ABOUT ==================== -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap grid-2">
+    <div class="reveal">
+      <h2 id="about-title" data-i18n-html="about.h2">Por qué los viajeros de la<br><em>Costa Norte</em> eligen a Junior</h2>
+      <p class="lead" data-i18n="about.p1">Junior Martínez lleva años manejando esta costa: la ruta del aeropuerto a Sosúa, los kitesurfistas rumbo a Cabarete, las familias que suben a Playa Grande, las parejas que buscan los saltos de Damajagua. Sabe cuál carretera se inunda en octubre y cuál atajo te ahorra veinte minutos un domingo.</p>
+      <p data-i18n="about.p2">Esto no es un call center. Cuando escribes al WhatsApp de esta página, le escribes a Junior. Él te confirma el precio antes de viajar, monitorea tu vuelo y responde si tus planes cambian a medianoche. Esa es toda la promesa: un chofer al que sí puedes contactar, un precio acordado por escrito y un carro limpio, fresco y cómodo esperándote.</p>
+      <ul class="ticks">
+        <li data-i18n="about.t1">Servicio privado únicamente — nunca compartes el vehículo con desconocidos</li>
+        <li data-i18n="about.t2">Monitoreo de vuelo: si aterrizas tarde, no pagas nada extra</li>
+        <li data-i18n="about.t3">Sillas para niños disponibles a pedido, sin costo</li>
+        <li data-i18n="about.t4">Efectivo en US$ o pesos, o pago con tarjeta coordinado por adelantado</li>
+      </ul>
+      <a class="btn btn--brand" data-wa="¡Hola Junior! Vi tu página web y quisiera consultar por un traslado." data-wa-en="Hi Junior! I found your website and I'd like to ask about a transfer.">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <span data-i18n="about.cta">Escríbele a Junior</span>
+      </a>
+    </div>
+
+    <div class="reveal about__art">
+      <figure class="frame frame--tall">
+        <img src="/assets/images/junior-driver.jpg" alt="Junior Martinez beside his vehicle in Sosúa, Dominican Republic" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="about.cap">Junior Martínez · Sosúa, Puerto Plata</figcaption>
+      </figure>
+      <div class="about__stats">
+        <div><b>50+</b><span data-i18n="about.s1">destinos a precio fijo</span></div>
+        <div><b>0</b><span data-i18n="about.s2">cargos sorpresa, nunca</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 3. SERVICES ==================== -->
+<section class="section section--mist" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <h2 id="services-title" data-i18n-html="srv.h2">Traslados por toda la<br>Costa Norte <em>dominicana</em></h2>
+      <p class="section__sub" data-i18n="srv.sub">Todos los servicios son privados, a precio fijo y se reservan con un solo mensaje de WhatsApp.</p>
+    </header>
+
+    <div class="cards" data-stagger="">
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-plane"></use></svg></span>
+        <h3 data-i18n="srv.1.h">Traslados al aeropuerto</h3>
+        <p data-i18n="srv.1.p">Puerto Plata (POP), Santiago (STI), Samaná (AZS) y Las Américas (SDQ). Recibimiento en llegadas con cartel con tu nombre, equipaje atendido y monitoreo de vuelo por si aterrizas tarde.</p>
+        <p class="card__rate" data-i18n-html="srv.1.r">Desde <b>US$25</b> · POP ↔ Sosúa</p>
+        <a class="link" data-wa="¡Hola Junior! Necesito un traslado al aeropuerto. Datos de mi vuelo: " data-wa-en="Hi Junior! I need an airport transfer. My flight details: "><span data-i18n="srv.1.a">Reservar traslado al aeropuerto</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-car"></use></svg></span>
+        <h3 data-i18n="srv.2.h">Taxi privado</h3>
+        <p data-i18n="srv.2.p">De punto a punto en Sosúa, Cabarete y Puerto Plata: la cena, el supermercado, una noche fuera o el regreso a las 2am. El mismo carro, el mismo chofer, precio acordado antes de subir.</p>
+        <p class="card__rate" data-i18n-html="srv.2.r">Desde <b>US$7</b> · dentro de Sosúa</p>
+        <a class="link" data-wa="¡Hola Junior! Quisiera un taxi privado. Recogida en: " data-wa-en="Hi Junior! I'd like a private taxi. Pick-up: "><span data-i18n="srv.2.a">Reservar un taxi privado</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-hotel"></use></svg></span>
+        <h3 data-i18n="srv.3.h">Traslados a hoteles y villas</h3>
+        <p data-i18n="srv.3.p">Puerta a puerta a todos los resorts y residenciales de la costa: Playa Dorada, Casa Linda, Sea Horse Ranch, Perla Marina, Bahía Príncipe, Riu Merengue, Celuisma y más.</p>
+        <p class="card__rate" data-i18n-html="srv.3.r">Desde <b>US$10</b> · villas zona Sosúa</p>
+        <a class="link" data-wa="¡Hola Junior! Necesito un traslado a hotel/villa. Mi alojamiento es: " data-wa-en="Hi Junior! I need a hotel/villa transfer. My accommodation is: "><span data-i18n="srv.3.a">Reservar traslado a hotel</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-palm"></use></svg></span>
+        <h3 data-i18n="srv.4.h">Excursiones y paseos</h3>
+        <p data-i18n="srv.4.p">Los 27 Charcos de Damajagua, Playa Grande, Punta Rucia y Cayo Arena, el teleférico de Puerto Plata, la Fortaleza San Felipe, Santiago. Junior te espera mientras exploras y te lleva de vuelta.</p>
+        <p class="card__rate" data-i18n-html="srv.4.r">Desde <b>US$50</b> · medio día</p>
+        <a class="link" data-wa="¡Hola Junior! Quisiera organizar una excursión a: " data-wa-en="Hi Junior! I'd like to arrange an excursion to: "><span data-i18n="srv.4.a">Planear una excursión</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-crown"></use></svg></span>
+        <h3 data-i18n="srv.5.h">VIP y chofer por hora</h3>
+        <p data-i18n="srv.5.p">Contrata a Junior por hora para reuniones, visitas a propiedades, una boda o un cliente. Discreto, puntual, bien presentado y disponible el tiempo que necesites.</p>
+        <p class="card__rate" data-i18n-html="srv.5.r">Tarifa por hora a consultar</p>
+        <a class="link" data-wa="¡Hola Junior! Quisiera contratar un chofer privado por hora el día: " data-wa-en="Hi Junior! I'd like to book a private driver by the hour on: "><span data-i18n="srv.5.a">Solicitar servicio VIP</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+
+      <article class="card reveal">
+        <span class="card__ic"><svg class="ic" aria-hidden="true"><use href="#i-road"></use></svg></span>
+        <h3 data-i18n="srv.6.h">Traslados de larga distancia</h3>
+        <p data-i18n="srv.6.p">Cruzando el país por carretera: Santo Domingo, Punta Cana, Samaná, Las Terrenas, Barahona, Montecristi. Un solo vehículo todo el camino, con las paradas que quieras.</p>
+        <p class="card__rate" data-i18n-html="srv.6.r">Desde <b>US$100</b> · Santiago y más allá</p>
+        <a class="link" data-wa="¡Hola Junior! Necesito un traslado de larga distancia desde Sosúa hasta: " data-wa-en="Hi Junior! I need a long-distance transfer from Sosúa to: "><span data-i18n="srv.6.a">Cotizar larga distancia</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EXCURSIONS GALLERY ========== -->
+<section class="section section--mist" id="excursions" aria-labelledby="xgal-title">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <h2 id="xgal-title" data-i18n-html="xgal.h2">Excursiones reales,<br><em>barro real</em></h2>
+      <p class="section__sub" data-i18n="xgal.sub">Junior organiza días de buggy y ATV por el campo — estos son viajes recientes que ha llevado a sus huéspedes.</p>
+    </header>
+
+    <div class="xgal" data-stagger="">
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-buggy-splash.jpg" alt="Dune buggy splashing through mud on a countryside excursion near Sosúa" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.1">Safari en buggy · trillos todoterreno</figcaption>
+      </figure>
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-buggy-family.jpg" alt="Family riding a buggy through a muddy trail on a Dominican excursion" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.2">Tour familiar en buggy</figcaption>
+      </figure>
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-atv-convoy.jpg" alt="Line of ATV riders on a countryside excursion road" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.3">Convoy de ATV · caminos de monte</figcaption>
+      </figure>
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-buggy-mud.jpg" alt="Dune buggy crossing a deep mud pit on excursion" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.4">Cruce de barrero</figcaption>
+      </figure>
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-buggy-river.jpg" alt="Dune buggy splashing through a river crossing" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.5">Cruce de río</figcaption>
+      </figure>
+      <figure class="frame frame--wide reveal">
+        <img src="/assets/images/excursion-atv-group.jpg" alt="Group of ATV riders on a countryside excursion" loading="lazy" onerror="this.closest('.frame').classList.add('frame--empty');this.remove()">
+        <figcaption data-i18n="xgal.6">Excursión grupal en ATV</figcaption>
+      </figure>
+    </div>
+
+    <a class="btn btn--brand xgal__cta reveal" data-wa="¡Hola Junior! Quisiera organizar una excursión a: " data-wa-en="Hi Junior! I'd like to arrange an excursion to: ">
+      <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+      <span data-i18n="xgal.cta">Planear una excursión</span>
+    </a>
+  </div>
+</section>
+
+<!-- ========== CTA BANNER 1 ========== -->
+<section class="cta-band" aria-label="Book by WhatsApp">
+  <div class="wrap cta-band__inner reveal">
+    <div>
+      <h2 data-i18n="cta1.h">¿Aún lo estás pensando? Pregunta el precio.</h2>
+      <p data-i18n="cta1.p">Envía tu fecha, número de vuelo y destino. Junior responde con un total fijo, normalmente en minutos.</p>
+    </div>
+    <a class="btn btn--brand btn--lg" data-wa="¡Hola Junior! ¿Me puedes dar un precio para un traslado? Fecha: / Vuelo: / Destino: " data-wa-en="Hi Junior! Could you give me a price for a transfer? Date: / Flight: / Destination: ">
+      <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+      <span data-i18n="cta1.b">Pedir un precio</span>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== 4. WHY CHOOSE US ==================== -->
+<section class="section section--dark" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <header class="section__head section__head--light reveal">
+      <h2 id="why-title" data-i18n-html="why.h2">Seis razones por las que tu<br>viaje sale <em>exacto</em></h2>
+    </header>
+
+    <div class="reasons" data-stagger="">
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-badge"></use></svg>
+        <h3 data-i18n="why.1.h">Choferes con licencia</h3>
+        <p data-i18n="why.1.p">Con licencia, seguro y permiso para trabajar en el aeropuerto. Viajas con un profesional, no con un oportunista en la salida.</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-seat"></use></svg>
+        <h3 data-i18n="why.2.h">Vehículos cómodos</h3>
+        <p data-i18n="why.2.p">Carros y minivans modernos e impecables con espacio real para equipaje: palos de golf, tablas de surf, equipo de kite y las maletas de toda la familia.</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-clock"></use></svg>
+        <h3 data-i18n="why.4.h">Servicio puntual</h3>
+        <p data-i18n="why.4.p">Junior llega temprano, no a la hora. Monitorea los vuelos, así que si aterrizas dos horas tarde tu chofer sigue ahí esperando.</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-tag"></use></svg>
+        <h3 data-i18n="why.5.h">Precios fijos</h3>
+        <p data-i18n="why.5.p">El precio que acuerdas por WhatsApp es el que pagas. Sin taxímetro, sin recargo nocturno, sin cargo por maletas, sin renegociar al llegar.</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-globe"></use></svg>
+        <h3 data-i18n="why.6.h">Inglés y español</h3>
+        <p data-i18n="why.6.p">Reserva, pregunta y cambia planes en inglés o español. Nada se pierde entre tu mensaje y tu chofer.</p>
+      </div>
+      <div class="reason reveal">
+        <svg class="ic" aria-hidden="true"><use href="#i-moon"></use></svg>
+        <h3 data-i18n="why.7.h">Disponible 24/7</h3>
+        <p data-i18n="why.7.p">La salida de las 5am y la llegada de la 1am son normales aquí. Escribe a cualquier hora y recibe una respuesta real.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 5. POPULAR DESTINATIONS ==================== -->
+<section class="section" id="destinations" aria-labelledby="dest-title">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <h2 id="dest-title" data-i18n-html="dest.h2">A dónde va <em>de verdad</em><br>la Costa Norte</h2>
+      <p class="section__sub" data-i18n="dest.sub">Precios fijos desde Sosúa, por vehículo, 1–6 pasajeros. El mismo precio en sentido contrario.</p>
+    </header>
+
+    <div class="dests" data-stagger="">
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/pop-airport.jpg" alt="Puerto Plata International Airport arrivals" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">POP</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.1.h">Aeropuerto Puerto Plata</h3>
+          <p data-i18n="dest.1.p">Gregorio Luperón Internacional. Recibimiento en llegadas, monitoreo de vuelo y equipaje atendido.</p>
+          <div class="dest__meta"><span>≈ 15 min</span><b>US$25</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado entre el Aeropuerto de Puerto Plata (POP) y Sosúa. Mi vuelo es: " data-wa-en="Hi Junior! I need a transfer between Puerto Plata Airport (POP) and Sosúa. My flight is: "><span data-i18n="dest.1.a">Reservar traslado POP</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/sosua.jpg" alt="Sosúa beach, Dominican Republic" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">SOS</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.2.h">Sosúa</h3>
+          <p data-i18n="dest.2.p">Bahía de Sosúa, Playa Alicia, la calle Pedro Clisante y todos los residenciales del pueblo.</p>
+          <div class="dest__meta"><span>≈ 5 min</span><b>US$7</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un taxi dentro de Sosúa. Recogida en: " data-wa-en="Hi Junior! I need a taxi within Sosúa. Pick-up: "><span data-i18n="dest.2.a">Reservar en Sosúa</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/cabarete.jpg" alt="Kitesurfers at Cabarete beach" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">CAB</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.3.h">Cabarete</h3>
+          <p data-i18n="dest.3.p">La capital del kite y el surf. Las tablas y el equipo viajan gratis, solo dinos qué traes.</p>
+          <div class="dest__meta"><span>≈ 15 min</span><b>US$15</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado a Cabarete. Fecha y hora: " data-wa-en="Hi Junior! I need a transfer to Cabarete. Date and time: "><span data-i18n="dest.3.a">Reservar Cabarete</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/puerto-plata.jpg" alt="Puerto Plata city and Mount Isabel de Torres" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">PLP</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.4.h">Puerto Plata</h3>
+          <p data-i18n="dest.4.p">El Malecón, la Fortaleza San Felipe, el museo del ámbar y el teleférico a Loma Isabel de Torres.</p>
+          <div class="dest__meta"><span>≈ 30 min</span><b>US$35</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado a Puerto Plata. Fecha y hora: " data-wa-en="Hi Junior! I need a transfer to Puerto Plata. Date and time: "><span data-i18n="dest.4.a">Reservar Puerto Plata</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/cofresi.jpg" alt="Cofresí beach and resort area" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">COF</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.5.h">Cofresí y Costambar</h3>
+          <p data-i18n="dest.5.p">Ocean World, Lifestyle Holidays y las villas de Costambar, al oeste de Puerto Plata.</p>
+          <div class="dest__meta"><span>≈ 40 min</span><b>US$50</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado a Cofresí / Costambar. Fecha y hora: " data-wa-en="Hi Junior! I need a transfer to Cofresí / Costambar. Date and time: "><span data-i18n="dest.5.a">Reservar Cofresí</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/rio-san-juan.jpg" alt="Laguna Gri-Gri at Río San Juan" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">RSJ</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.6.h">Río San Juan</h3>
+          <p data-i18n="dest.6.p">La Laguna Gri-Grí, Playa Caletón y el extremo tranquilo de la costa. Playa Grande es la misma ruta.</p>
+          <div class="dest__meta"><span>≈ 1 h 15</span><b>US$100</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado a Río San Juan. Fecha y hora: " data-wa-en="Hi Junior! I need a transfer to Río San Juan. Date and time: "><span data-i18n="dest.6.a">Reservar Río San Juan</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/punta-rucia.jpg" alt="Cayo Arena sandbank off Punta Rucia" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">PRC</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.8.h">Punta Rucia</h3>
+          <p data-i18n="dest.8.p">El punto de salida hacia Cayo Arena, el banco de arena en medio del arrecife. Un día completo.</p>
+          <div class="dest__meta"><span>≈ 2 h</span><b>US$200</b></div>
+          <a class="link" data-wa="¡Hola Junior! Quisiera ir a Punta Rucia / Cayo Arena. Fecha: " data-wa-en="Hi Junior! I'd like to go to Punta Rucia / Cayo Arena. Date: "><span data-i18n="dest.8.a">Reservar Punta Rucia</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+      <article class="dest reveal">
+        <div class="dest__media"><img src="/assets/images/santiago.jpg" alt="Monument to the Heroes in Santiago de los Caballeros" loading="lazy" onerror="this.closest('.dest__media').classList.add('is-empty');this.remove()"><span class="dest__code">STI</span></div>
+        <div class="dest__body">
+          <h3 data-i18n="dest.9.h">Santiago</h3>
+          <p data-i18n="dest.9.p">La ciudad y el Aeropuerto Internacional del Cibao, por la carretera de montaña de La Cumbre.</p>
+          <div class="dest__meta"><span>≈ 1 h 30</span><b>US$100</b></div>
+          <a class="link" data-wa="¡Hola Junior! Necesito un traslado a Santiago. Fecha y hora: " data-wa-en="Hi Junior! I need a transfer to Santiago. Date and time: "><span data-i18n="dest.9.a">Reservar Santiago</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA BANNER 2 ========== -->
+<section class="cta-band" aria-label="Book by WhatsApp">
+  <div class="wrap cta-band__inner reveal">
+    <div>
+      <h2 data-i18n="cta2.h">¿No está en la lista, o viajan en grupo grande?</h2>
+      <p data-i18n="cta2.p">Junior cubre todo el país y cualquier tamaño de grupo — seis en una minivan, más con un segundo vehículo a la misma tarifa. Envía los detalles y recibe un total fijo.</p>
+    </div>
+    <a class="btn btn--brand btn--lg" data-wa="¡Hola Junior! Tengo un viaje que no encaja en la lista estándar — destino y/o tamaño del grupo: " data-wa-en="Hi Junior! I have a trip that doesn't fit the standard list — destination and/or group size: ">
+      <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+      <span data-i18n="cta2.b">Cotización personalizada</span>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== 6. REVIEWS ==================== -->
+<section class="section section--mist" id="reviews" aria-labelledby="rev-title">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <h2 id="rev-title" data-i18n-html="rev.h2">Lo que dicen los pasajeros<br>tras el <em>primer viaje</em></h2>
+    </header>
+
+        <div class="reviews" data-stagger="">
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.1.q">Junior es el mejor taxista de toda la República Dominicana. ¡Súper confiable y profesional!</p>
+        <footer><b>Brendon Robinson</b><span data-i18n="rev.1.a">Reseña de Google</span></footer>
+      </blockquote>
+
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.2.q">Cuando visitamos República Dominicana, Junior es nuestra opción para todo el transporte. Lo conocemos desde hace casi 10 años y es muy confiable, con precios razonables. ¡Sigue así, Junior!</p>
+        <footer><b>Mitch Dobney</b><span data-i18n="rev.2.a">Reseña de Google · Cliente desde hace ~10 años</span></footer>
+      </blockquote>
+
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.3.q">Excelente persona y un chofer muy hábil. Mi familia, mis amigos y yo lo hemos usado por años. Es el único taxista de la costa norte en quien confío para que nos lleve y nos traiga con seguridad.</p>
+        <footer><b>Shawn Carter</b><span data-i18n="rev.3.a">Reseña de Google</span></footer>
+      </blockquote>
+
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.4.q">Sin duda, el mejor taxi de la zona de Sosúa. Uso su servicio desde hace más de 10 años, en distancias largas y cortas. Su vehículo siempre está impecable y siempre llega puntual.</p>
+        <footer><b>Syndie Pierrelouis</b><span data-i18n="rev.4.a">Reseña de Google · Cliente desde hace más de 10 años</span></footer>
+      </blockquote>
+
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.5.q">Mi amigo Junior es el mejor del negocio. Vengo a la República Dominicana desde 2016 y es la única persona a la que llamo para que me recoja.</p>
+        <footer><b>Rico C.O.D.</b><span data-i18n="rev.5.a">Reseña de Google · Cliente desde 2016</span></footer>
+      </blockquote>
+
+      <blockquote class="review reveal">
+        <div class="review__stars" role="img" aria-label="5 out of 5"><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg><svg class="ic" aria-hidden="true"><use href="#i-star"></use></svg></div>
+        <p data-i18n="rev.6.q">Uno de los taxistas más buenos y honestos de la zona de Sosúa / Cabarete / Puerto Plata. Llevo trabajando con Junior desde hace 3 años y lo recomiendo totalmente.</p>
+        <footer><b>Cris Caballero</b><span data-i18n="rev.6.a">Reseña de Google · Cliente desde hace 3 años · Local Guide</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 7. QUOTE FORM ==================== -->
+<section class="section" id="quote" aria-labelledby="quote-title">
+  <div class="wrap grid-2 grid-2--form">
+    <div class="reveal">
+      <h2 id="quote-title" data-i18n-html="q.h2">Recibe tu precio fijo<br>en <em>un mensaje</em></h2>
+      <p class="lead" data-i18n="q.lead">Llena esto y se convierte en un mensaje de WhatsApp ya redactado: solo tienes que enviarlo. Esta web no guarda nada y nadie te agrega a una lista de correos.</p>
+      <ul class="ticks">
+        <li data-i18n="q.t1">Respuesta normalmente en minutos, las 24 horas</li>
+        <li data-i18n="q.t2">El total cotizado es definitivo — sin taxímetro, sin extras</li>
+        <li data-i18n="q.t3">Los viajes de ida y vuelta reservados juntos llevan una sola confirmación</li>
+      </ul>
+      <div class="quote__aside">
+        <svg class="ic" aria-hidden="true"><use href="#i-plane"></use></svg>
+        <p data-i18n-html="q.aside"><b>¿Vienes en avión?</b> Incluye tu número de vuelo. Junior lo monitorea y ajusta la recogida automáticamente si te retrasas.</p>
+      </div>
+    </div>
+
+    <form class="qform reveal" id="quoteForm" novalidate="">
+      <div class="qform__row">
+        <label class="field">
+          <span data-i18n="q.name">Tu nombre</span>
+          <input type="text" name="name" id="qName" autocomplete="name" required="" placeholder="Maria Lopez">
+        </label>
+        <label class="field">
+          <span data-i18n="q.pax">Pasajeros</span>
+          <input type="number" name="pax" id="qPax" min="1" max="30" value="2" inputmode="numeric">
+        </label>
+      </div>
+
+      <div class="qform__row">
+        <label class="field">
+          <span data-i18n="q.from">Recogida</span>
+          <input type="text" name="from" id="qFrom" list="placeList" required="" placeholder="Puerto Plata Airport (POP)">
+        </label>
+        <label class="field">
+          <span data-i18n="q.to">Destino</span>
+          <input type="text" name="to" id="qTo" list="placeList" required="" placeholder="Sosúa">
+        </label>
+      </div>
+      <datalist id="placeList"></datalist>
+
+      <div class="qform__row">
+        <label class="field">
+          <span data-i18n="q.date">Fecha</span>
+          <input type="date" name="date" id="qDate" required="">
+        </label>
+        <label class="field">
+          <span data-i18n="q.time">Hora</span>
+          <input type="time" name="time" id="qTime" required="">
+        </label>
+      </div>
+
+      <label class="field">
+        <span data-i18n-html="q.flight">Número de vuelo <em>(opcional)</em></span>
+        <input type="text" name="flight" id="qFlight" placeholder="e.g. DL 1234">
+      </label>
+
+      <fieldset class="field">
+        <legend data-i18n="q.trip">Tipo de viaje</legend>
+        <div class="choices">
+          <label><input type="radio" name="trip" value="One way" checked=""><span data-i18n="q.oneway">Solo ida</span></label>
+          <label><input type="radio" name="trip" value="Round trip"><span data-i18n="q.round">Ida y vuelta</span></label>
+          <label><input type="radio" name="trip" value="Hourly / full day"><span data-i18n="q.hourly">Por hora o día completo</span></label>
+        </div>
+      </fieldset>
+
+      <label class="field">
+        <span data-i18n-html="q.notes">¿Algo más? <em>(opcional)</em></span>
+        <textarea name="notes" id="qNotes" rows="3" placeholder="Silla de niño, equipaje extra, tablas de surf, una parada en el camino…" data-i18n-ph="q.notesPh" data-ph-en="Child seat, extra luggage, surfboards, a stop on the way…"></textarea>
+      </label>
+
+      <button type="submit" class="btn btn--brand btn--lg btn--block">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <span data-i18n="q.send">Enviar por WhatsApp</span>
+      </button>
+      <!-- role="status" so the validation message is announced, not just seen -->
+      <p class="qform__hint" id="qHint" role="status" data-i18n="q.hint">Abre WhatsApp con tus datos ya escritos. Tú solo lo envías.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ==================== 8. FAQ ==================== -->
+<section class="section section--mist" id="faq" aria-labelledby="faq-title">
+  <div class="wrap wrap--narrow">
+    <header class="section__head reveal">
+      <h2 id="faq-title" data-i18n-html="faq.h2">Lo que preguntan los viajeros<br><em>antes</em> de reservar</h2>
+    </header>
+
+    <div class="faq" data-stagger="">
+      <details class="qa reveal" open="">
+        <summary><span data-i18n="faq.1.q">¿Cómo reservo?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.1.a">Envía un solo mensaje de WhatsApp con tu fecha, hora, punto de recogida, destino y —si vienes en avión— tu número de vuelo. Junior responde con un total fijo en dólares. Cuando dices que sí, queda reservado. No hay app que descargar, ni cuenta, ni depósito para traslados normales.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.2.q">¿Aceptan efectivo?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.2.a">Sí, el efectivo es la forma más fácil de pagar y se entrega al chofer al terminar el viaje. Se aceptan dólares y pesos dominicanos. Los pesos se convierten a la tasa del día. Si prefieres no cargar efectivo, pregunta por tarjeta o transferencia al reservar y Junior lo coordina por adelantado.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.3.q">¿Ofrecen viajes de ida y vuelta?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.3.a">Sí, y reservar ambos sentidos a la vez es lo más inteligente: tu regreso queda fijado en la agenda y Junior te confirma la hora de recogida el día de tu salida. Cada tramo se cobra a la tarifa fija normal; no se agrega nada por el regreso. Si tu vuelo de vuelta cambia, escríbele y la recogida se mueve contigo.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.4.q">¿El precio es realmente fijo?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.4.a">Sí. El número que acuerdas por WhatsApp es el que pagas. No hay taxímetro, ni recargo nocturno, ni cargo por maletas, ni cobro por persona: un solo precio cubre el vehículo para hasta seis pasajeros. Lo único que cambia un precio es que tú cambies el viaje: agregar una parada, un segundo destino o tiempo de espera.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.5.q">¿Puedo pagar en dólares?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.5.a">Todos los precios de esta página están en dólares estadounidenses y se aceptan en todos los destinos donde Junior maneja. También se pueden coordinar pesos dominicanos, dólares canadienses y euros: solo menciona qué moneda traes al reservar, para acordar el monto exacto antes de viajar.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.6.q">¿Cómo encuentro a mi chofer en el aeropuerto?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.6.a">Pasa migración y recoge tu equipaje, sal por las puertas de llegadas de Puerto Plata (POP) y busca tu nombre en un cartel: Junior espera en el área de recibimiento justo afuera, no en el parqueo. Él monitorea tu vuelo, así que un retraso no importa. Si no lo ves, mándale un WhatsApp apenas aterrices y él va hacia ti.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.7.q">¿Con cuánta anticipación debo reservar?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.7.a">Para traslados de aeropuerto, 24 horas es cómodo y una semana es ideal en temporada alta (diciembre–abril y julio–agosto). Para un taxi por Sosúa o Cabarete, una hora de aviso suele sobrar, y muchas veces mucho menos. Junior trabaja 24/7, así que las salidas de madrugada y las llegadas nocturnas son normales, no una excepción.</p></div>
+      </details>
+
+      <details class="qa reveal">
+        <summary><span data-i18n="faq.8.q">¿Tienen sillas para niños?</span><i aria-hidden="true"></i></summary>
+        <div class="qa__body"><p data-i18n="faq.8.a">Sí, sin costo adicional. Solo dile a Junior las edades de tus hijos al reservar para que la silla correcta esté instalada antes de salir al aeropuerto. Las familias que viajan con coche de bebé y varias maletas también deberían mencionarlo, para enviar una minivan en lugar de un carro.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 9. MAIN WHATSAPP BANNER ==================== -->
+<section class="finale" aria-labelledby="finale-title">
+  <div class="wrap finale__inner reveal">
+    <h2 id="finale-title" data-i18n-html="fin.h2">Tu chofer <em>ya está despierto</em>.</h2>
+    <p class="finale__sub" data-i18n="fin.sub">Sea la hora que sea, envía tu vuelo y tu destino. Tendrás un precio fijo de vuelta antes de terminar de desempacar el bulto de mano.</p>
+    <div class="finale__btns">
+      <a class="btn btn--brand btn--xl" data-wa="¡Hola Junior! Quisiera reservar un traslado. Fecha: / Hora: / Desde: / Hasta: / Pasajeros: " data-wa-en="Hi Junior! I'd like to book a transfer. Date: / Time: / From: / To: / Passengers: ">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <span data-i18n="fin.b1">Reservar por WhatsApp</span>
+      </a>
+      <a class="btn btn--outline btn--xl" href="tel:+18292991661">
+        <svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg>
+        <span data-i18n="fin.b2">Llamar al +1 829 299 1661</span>
+      </a>
+    </div>
+    <p class="finale__micro" data-i18n="fin.micro">Responde 24/7 · Inglés y español · Precios fijos en US$</p>
+  </div>
+</section>
+
+<!-- ==================== 10. CONTACT + MAP ==================== -->
+<section class="section" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <header class="section__head reveal">
+      <h2 id="contact-title" data-i18n-html="ct.h2">Contacta a Junior<br>Martínez <em>Transfer</em></h2>
+    </header>
+
+    <div class="contact">
+      <div class="contact__list reveal">
+        <a class="cx" data-wa="¡Hola Junior! Tengo una pregunta sobre un traslado." data-wa-en="Hi Junior! I have a question about a transfer.">
+          <span class="cx__ic cx__ic--wa"><svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg></span>
+          <span class="cx__t"><b data-i18n="ct.wa">WhatsApp</b><span>+1 (829) 299-1661</span><em data-i18n="ct.wa.s">La forma más rápida de reservar — normalmente contesta en minutos</em></span>
+        </a>
+        <a class="cx" href="tel:+18292991661">
+          <span class="cx__ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"></use></svg></span>
+          <span class="cx__t"><b data-i18n="ct.ph">Teléfono</b><span>+1 (829) 299-1661</span><em data-i18n="ct.ph.s">Llama directamente si prefieres hablar</em></span>
+        </a>
+        <a class="cx" href="mailto:info@juniormartineztransfer.com">
+          <span class="cx__ic"><svg class="ic" aria-hidden="true"><use href="#i-mail"></use></svg></span>
+          <span class="cx__t"><b data-i18n="ct.em">Correo</b><span>info@juniormartineztransfer.com</span><em data-i18n="ct.em.s">Para facturas, reservas de grupo y aliados de villas</em></span>
+        </a>
+        <div class="cx cx--static">
+          <span class="cx__ic"><svg class="ic" aria-hidden="true"><use href="#i-clock"></use></svg></span>
+          <span class="cx__t"><b data-i18n="ct.hr">Horario</b><span data-i18n="ct.hr.v">24 horas, 7 días a la semana</span><em data-i18n="ct.hr.s">Incluyendo feriados, vuelos nocturnos y salidas a las 4am</em></span>
+        </div>
+        <div class="cx cx--static">
+          <span class="cx__ic"><svg class="ic" aria-hidden="true"><use href="#i-pin"></use></svg></span>
+          <span class="cx__t"><b data-i18n="ct.ar">Área de servicio</b><span>Sosúa · Cabarete · Puerto Plata · POP</span><em data-i18n="ct.ar.s">Con base en Sosúa, cubriendo toda la Costa Norte y todo el país a solicitud</em></span>
+        </div>
+      </div>
+
+      <div class="contact__map reveal">
+        <iframe title="Map of Sosúa, Puerto Plata — Junior Martinez Transfer service area" src="https://www.google.com/maps?q=Sos%C3%BAa,%20Puerto%20Plata,%20Dominican%20Republic&amp;z=12&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        <div class="contact__maptag">
+          <b>Sosúa, Puerto Plata</b>
+          <span>Dominican Republic</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="foot">
+  <div class="wrap foot__top">
+    <div class="foot__brand">
+      <a class="brand brand--foot" href="#top">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><path d="M7 26h26" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"></path><path d="M9 22l2.6-6.6A3 3 0 0 1 14.4 13h11.2a3 3 0 0 1 2.8 1.9L31 22z" fill="currentColor" opacity=".9"></path><circle cx="13.5" cy="27" r="3" fill="none" stroke="currentColor" stroke-width="2.2"></circle><circle cx="26.5" cy="27" r="3" fill="none" stroke="currentColor" stroke-width="2.2"></circle></svg>
+        </span>
+        <span class="brand__text"><strong>Junior Martinez</strong><span data-i18n="brand.tag">Transfer y Taxi · Sosúa</span></span>
+      </a>
+      <p data-i18n="ft.about">Servicio privado de taxi y traslados al aeropuerto con base en Sosúa, República Dominicana. Precios fijos, choferes con licencia, vehículos con aire acondicionado y un número de WhatsApp que siempre responde.</p>
+      <a class="btn btn--brand" data-wa="¡Hola Junior! Me gustaría reservar un traslado." data-wa-en="Hi Junior! I'd like to book a transfer.">
+        <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+        <span data-i18n="ft.book">Reservar por WhatsApp</span>
+      </a>
+    </div>
+
+    <nav class="foot__col" aria-labelledby="f-serv">
+      <h3 id="f-serv" data-i18n="ft.services">Servicios</h3>
+      <a href="#services" data-i18n="ft.s1">Traslados al aeropuerto</a>
+      <a href="#services" data-i18n="ft.s2">Taxi privado</a>
+      <a href="#services" data-i18n="ft.s3">Hoteles y villas</a>
+      <a href="#services" data-i18n="ft.s4">Excursiones</a>
+      <a href="#services" data-i18n="ft.s5">VIP y chofer por hora</a>
+      <a href="#services" data-i18n="ft.s6">Larga distancia</a>
+    </nav>
+
+    <nav class="foot__col" aria-labelledby="f-dest">
+      <h3 id="f-dest" data-i18n="ft.destinations">Destinos</h3>
+      <a href="#destinations">Puerto Plata Airport (POP)</a>
+      <a href="#destinations">Sosúa</a>
+      <a href="#destinations">Cabarete</a>
+      <a href="#destinations">Puerto Plata</a>
+      <a href="#destinations">Cofresí</a>
+      <a href="#destinations">Río San Juan</a>
+    </nav>
+
+    <div class="foot__col">
+      <h3 data-i18n="ft.contact">Contacto</h3>
+      <a href="tel:+18292991661">+1 (829) 299-1661</a>
+      <a href="mailto:info@juniormartineztransfer.com">info@juniormartineztransfer.com</a>
+      <span data-i18n-html="ft.addr">Sosúa, Puerto Plata<br>República Dominicana</span>
+      <span data-i18n="ft.hours">Abierto 24 horas · 7 días</span>
+    </div>
+  </div>
+
+  <div class="wrap foot__bar">
+    <p>© <span id="year">2026</span> Junior Martinez Transfer. <span data-i18n="ft.rights">Todos los derechos reservados.</span></p>
+    <p class="foot__kw">Taxi Sosúa · Airport Transfer Puerto Plata · POP Airport Taxi · Taxi Cabarete · Private Driver Dominican Republic</p>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a class="wa-float" id="waFloat" data-wa="¡Hola Junior! Me gustaría reservar un traslado." aria-label="Book on WhatsApp" data-wa-en="Hi Junior! I'd like to book a transfer.">
+  <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"></use></svg>
+  <span class="wa-float__txt" data-i18n="wa.float">Reservar por WhatsApp</span>
+</a>
+
+<!-- Structured data: TaxiService. Review markup is deliberately omitted until real,
+     verifiable customer reviews exist — see DOCS/SEO.md -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Junior Martinez Transfer",
+  "description": "Private taxi and airport transfer service in Sosúa, Dominican Republic. Fixed-price transfers to and from Puerto Plata International Airport (POP), Cabarete, Puerto Plata and the whole North Coast.",
+  "url": "https://juniortransfertour.com/",
+  "telephone": "+1-829-299-1661",
+  "email": "info@juniormartineztransfer.com",
+  "priceRange": "$$",
+  "currenciesAccepted": "USD, DOP",
+  "paymentAccepted": "Cash, Bank transfer",
+  "image": "https://juniortransfertour.com/assets/images/og-cover.jpg",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Junior Martinez Transfer",
+    "telephone": "+1-829-299-1661",
+    "priceRange": "$$",
+    "image": "https://juniortransfertour.com/assets/images/og-cover.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sosúa",
+      "addressRegion": "Puerto Plata",
+      "addressCountry": "DO"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 19.7536, "longitude": -70.5186 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00", "closes": "23:59"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Sosúa" },
+    { "@type": "City", "name": "Cabarete" },
+    { "@type": "City", "name": "Puerto Plata" },
+    { "@type": "City", "name": "Río San Juan" },
+    { "@type": "City", "name": "Santiago de los Caballeros" },
+    { "@type": "Country", "name": "Dominican Republic" }
+  ],
+  "serviceType": ["Airport transfer","Private taxi","Hotel transfer","Excursion transport","VIP transport","Long distance transfer"],
+  "availableLanguage": ["en","es"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I book a taxi or airport transfer in Sosúa?", "acceptedAnswer": { "@type": "Answer", "text": "Send one WhatsApp message with your date, time, pick-up, destination and flight number. Junior replies with a fixed total in US dollars. No app, no account and no deposit for standard transfers." } },
+    { "@type": "Question", "name": "Do you accept cash?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Cash is paid to your driver at the end of the ride, in US dollars or Dominican pesos. Card or bank transfer can be arranged in advance." } },
+    { "@type": "Question", "name": "Do you offer round trips?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Booking both directions at once locks in your return pick-up. Each leg is charged at the normal fixed rate with nothing added for the return." } },
+    { "@type": "Question", "name": "Is the transfer price fixed?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The price agreed on WhatsApp is the price you pay. No meter, no night surcharge, no luggage fee, and one price covers up to six passengers." } },
+    { "@type": "Question", "name": "Can I pay in US dollars?", "acceptedAnswer": { "@type": "Answer", "text": "All prices are quoted in US dollars and US dollars are accepted. Dominican pesos, Canadian dollars and euros can also be arranged when you book." } },
+    { "@type": "Question", "name": "How do I find my driver at Puerto Plata Airport?", "acceptedAnswer": { "@type": "Answer", "text": "Walk out of the arrivals doors at POP and look for your name on a sign in the meeting area. Your flight is tracked, so delays are covered. If you cannot find your driver, send a WhatsApp message on landing." } }
+  ]
+}
+</script>
+
+<script src="/assets/js/i18n.js?v=15" defer=""></script>
+<script src="/assets/js/main.js?v=15" defer=""></script>
+
+
+</body></html>
