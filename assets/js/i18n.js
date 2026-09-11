@@ -23,7 +23,7 @@
     'brand.tag':         'Transfer y Taxi · Sosúa',
 
     /* ---- Hero ---- */
-    'hero.h1':       'Llegas a POP.<br><em>Alguien ya te espera.</em>',
+    'hero.h1':       'Taxi Sosúa y Traslados al Aeropuerto de Puerto Plata.<br><em>Llegas a POP. Alguien ya te espera.</em>',
     'hero.sub':      'Junior Martínez ofrece traslados privados a precio fijo por toda la Costa Norte dominicana. Tu chofer monitorea tu vuelo, te recibe en llegadas con un cartel con tu nombre y te lleva a tu hotel o villa en un vehículo fresco y cómodo. Sin taxímetro. Sin regatear en el parqueo. Sin sorpresas.',
     'hero.proof1':   'Con licencia y seguro',
     'hero.proof2':   'Inglés y español',
