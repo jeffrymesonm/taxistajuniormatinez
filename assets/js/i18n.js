@@ -61,7 +61,7 @@
     'srv.sub':     'Todos los servicios son privados, a precio fijo y se reservan con un solo mensaje de WhatsApp.',
     'srv.1.h':  'Traslados al aeropuerto',
     'srv.1.p':  'Puerto Plata (POP), Santiago (STI), Samaná (AZS) y Las Américas (SDQ). Recibimiento en llegadas con cartel con tu nombre, equipaje atendido y monitoreo de vuelo por si aterrizas tarde.',
-    'srv.1.r':  'Desde <b>US$25</b> · POP ↔ Sosúa',
+    'srv.1.r':  'Desde <b>US$30</b> · POP ↔ Sosúa',
     'srv.1.a':  'Reservar traslado al aeropuerto',
     'srv.2.h':  'Taxi privado',
     'srv.2.p':  'De punto a punto en Sosúa, Cabarete y Puerto Plata: la cena, el supermercado, una noche fuera o el regreso a las 2am. El mismo carro, el mismo chofer, precio acordado antes de subir.',
@@ -333,10 +333,14 @@
     });
 
     document.documentElement.lang = current;
-    var meta = current === 'es' ? META_ES : META_EN;
-    document.title = meta.title;
-    var md = document.querySelector('meta[name="description"]');
-    if (md) md.content = meta.desc;
+    // Only the two home pages take their <title>/description from here; every other
+    // page (blog, route pages) keeps the ones written in its own HTML.
+    if (/^\/(es\/?)?(index\.html)?$/.test(location.pathname)) {
+      var meta = current === 'es' ? META_ES : META_EN;
+      document.title = meta.title;
+      var md = document.querySelector('meta[name="description"]');
+      if (md) md.content = meta.desc;
+    }
 
     Array.prototype.slice.call(document.querySelectorAll('[data-lang-btn]')).forEach(function (b) {
       var on = b.getAttribute('data-lang-btn') === current;
@@ -344,15 +348,22 @@
       b.setAttribute('aria-pressed', String(on));
     });
 
-    try { localStorage.setItem('jmt-lang', current); } catch (e) { /* private mode */ }
+    if (!LANG_LOCKED) { try { localStorage.setItem('jmt-lang', current); } catch (e) { /* private mode */ } }
     document.dispatchEvent(new CustomEvent('langchange', { detail: { lang: current } }));
   }
+
+  var LANG_LOCKED = false;
 
   function init() {
     var saved = null;
     try { saved = localStorage.getItem('jmt-lang'); } catch (e) { /* ignore */ }
     // No saved choice: offer Spanish to Spanish-speaking browsers, English to everyone else.
-    var guess = saved || ((navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+    var authored = (document.documentElement.getAttribute('lang') || 'en').toLowerCase().slice(0, 2);
+    // Only the root URL ("/") picks its language from the visitor. Every other URL keeps
+    // the language its HTML is written in, so /es/... is always Spanish for search
+    // engines and visitors alike.
+    LANG_LOCKED = !/^\/(index\.html)?$/.test(location.pathname) && (authored === 'es' || authored === 'en');
+    var guess = LANG_LOCKED ? authored : (saved || ((navigator.language || 'en').toLowerCase().indexOf('es') === 0 ? 'es' : 'en'));
 
     apply(guess);
 
