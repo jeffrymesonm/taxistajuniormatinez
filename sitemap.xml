@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://juniortransfertour.com/es/blog/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -65,5 +65,35 @@
     <lastmod>2026-09-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://juniortransfertour.com/es/blog/precio-taxi-aeropuerto-puerto-plata-sosua/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juniortransfertour.com/es/blog/hay-uber-en-sosua-puerto-plata/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juniortransfertour.com/es/blog/guia-aeropuerto-puerto-plata-a-tu-hotel/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juniortransfertour.com/es/blog/excursion-buggy-atv-sosua-cabarete-precio/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://juniortransfertour.com/es/blog/traslados-playa-dorada-cofresi-costambar-rio-san-juan/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
