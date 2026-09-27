@@ -39,7 +39,7 @@
      Prices come from Junior's own price board. Drive times are estimates. */
   var RATES = [
     // ---- Airports ----
-    { id:'pop',  n:'Puerto Plata Airport (POP)',        p:25,  m:15,  g:'Airport', a:'pop gregorio luperon aeropuerto puerto plata international' },
+    { id:'pop',  n:'Puerto Plata Airport (POP)',        p:30,  m:15,  g:'Airport', a:'pop gregorio luperon aeropuerto puerto plata international' },
     { id:'sti',  n:'Santiago Airport (STI)',            p:100, m:90,  g:'Airport', a:'sti cibao aeropuerto santiago' },
     { id:'azs',  n:'Samaná Airport (AZS)',              p:150, m:190, g:'Airport', a:'azs el catey aeropuerto samana' },
     { id:'sdq',  n:'Las Américas Airport (SDQ)',        p:200, m:240, g:'Airport', a:'sdq santo domingo las americas aeropuerto' },
