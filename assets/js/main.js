@@ -134,7 +134,14 @@
 
   /** Build a wa.me deep link with a pre-written message. */
   function waLink(text) {
-    return 'https://wa.me/' + CONFIG.waNumber + '?text=' + encodeURIComponent(text);
+    return 'https://wa.me/' + CONFIG.waNumber + '?text=' + encodeURIComponent(text + pageRef());
+  }
+
+  /** Short page tag appended to every message so Junior can see which page
+      sent the customer, e.g. "(Ref: es/taxi-sosua)". Home = "home"/"es". */
+  function pageRef() {
+    var p = (location.pathname || '/').replace(/index\.html$/, '').replace(/^\/+|\/+$/g, '');
+    return '\n\n(Ref: ' + (p || 'home') + ')';
   }
 
   /** Format minutes as "≈ 45 min" or "≈ 2 h 15". */
