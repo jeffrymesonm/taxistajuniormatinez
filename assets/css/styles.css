@@ -1050,3 +1050,6 @@ p + p { margin-top: 1rem; }
   /* The car still parks at the end of the route — main.js jumps it there
      without a transition rather than leaving it stranded at the start. */
 }
+
+.dest__body h3 a { color: inherit; text-decoration: none; }
+.dest__body h3 a:hover, .dest__body h3 a:focus-visible { text-decoration: underline; text-underline-offset: .2em; }
