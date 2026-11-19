@@ -467,6 +467,21 @@
     });
   }
 
+  /* Google Tag Manager (container GTM-PQ2ZHD3X) + WhatsApp click event.
+     The GA4 tag itself is configured inside GTM, not here. */
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+  (function () {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PQ2ZHD3X';
+    document.head.appendChild(s);
+  })();
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[data-wa]') : null;
+    if (a) window.dataLayer.push({ event: 'whatsapp_click', page_path: location.pathname });
+  });
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
   } else {
