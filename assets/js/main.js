@@ -482,6 +482,21 @@
     if (a) window.dataLayer.push({ event: 'whatsapp_click', page_path: location.pathname });
   });
 
+  /* Brand logo (SVG, recreated from the client's logo): header, footer, favicon */
+  (function () {
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457 226" role="img" aria-label="Junior Martinez Transfer · Sosúa"><rect width="457" height="226" rx="14" fill="#060606"/><path d="M158 112V50Q158 14 194 14H266Q302 14 302 50V104H286M158 112" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><text x="230" y="100" text-anchor="middle" fill="#fff" font-family="Epilogue,Arial Black,Arial,sans-serif" font-weight="800" font-size="76" letter-spacing="-4">JM</text><path d="M152 106C178 140 236 146 288 131C240 133 188 130 152 106Z" fill="#FF3600"/><circle cx="291" cy="131" r="8" fill="#FF3600"/><circle cx="291" cy="131" r="3.5" fill="#fff"/><text x="228" y="182" text-anchor="middle" fill="#fff" font-family="Epilogue,Arial,sans-serif" font-weight="800" font-size="35" letter-spacing="1">JUNIOR MARTINEZ</text><text x="228" y="208" text-anchor="middle" fill="#fff" font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="12.5" letter-spacing="5">TRANSFER  ·  SOSÚA</text></svg>';
+    function apply() {
+      var els = document.querySelectorAll('.brand');
+      for (var i = 0; i < els.length; i++) {
+        var foot = els[i].classList.contains('brand--foot');
+        els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 64 : 46) + 'px;width:auto;display:block" ');
+      }
+      var ic = document.querySelector('link[rel="icon"]');
+      if (ic) ic.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(svg));
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
+  })();
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', boot);
   } else {
