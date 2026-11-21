@@ -458,8 +458,13 @@ p + p { margin-top: 1rem; }
   background: linear-gradient(180deg, rgba(12,5,2,.42) 0%, rgba(12,5,2,.26) 38%, rgba(12,5,2,.78) 100%);
 }
 
-.hero__copy { max-width: 46rem; margin-inline: auto; }
-.hero h1 { margin-bottom: 1.3rem; text-wrap: balance; }
+.hero__copy { max-width: 58rem; margin-inline: auto; }
+.hero h1 {
+  margin-bottom: 1.3rem; text-wrap: balance;
+  font-size: clamp(2rem, 4.9vw, 3.4rem); line-height: 1.1;
+  text-shadow: 0 2px 26px rgba(0,0,0,.5);
+}
+.hero h1 em { color: var(--brand-lift); }
 .hero__sub {
   font-size: clamp(1rem, 2.1vw, 1.14rem); color: rgba(255,255,255,.82);
   max-width: 52ch; margin-inline: auto;
