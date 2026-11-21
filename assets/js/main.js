@@ -483,23 +483,31 @@
   });
 
   /* Brand logo (SVG, recreated from the client's logo): header, footer, favicon */
-  (function () {
-    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457 226" role="img" aria-label="Junior Martinez Transfer · Sosúa"><rect width="457" height="226" rx="14" fill="#060606"/><path d="M158 112V50Q158 14 194 14H266Q302 14 302 50V104H286M158 112" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/><text x="230" y="100" text-anchor="middle" fill="#fff" font-family="Epilogue,Arial Black,Arial,sans-serif" font-weight="800" font-size="76" letter-spacing="-4">JM</text><path d="M152 106C178 140 236 146 288 131C240 133 188 130 152 106Z" fill="#FF3600"/><circle cx="291" cy="131" r="8" fill="#FF3600"/><circle cx="291" cy="131" r="3.5" fill="#fff"/><text x="228" y="182" text-anchor="middle" fill="#fff" font-family="Epilogue,Arial,sans-serif" font-weight="800" font-size="35" letter-spacing="1">JUNIOR MARTINEZ</text><text x="228" y="208" text-anchor="middle" fill="#fff" font-family="DM Sans,Arial,sans-serif" font-weight="600" font-size="12.5" letter-spacing="5">TRANSFER  ·  SOSÚA</text></svg>';
-    function apply() {
-      var els = document.querySelectorAll('.brand');
-      for (var i = 0; i < els.length; i++) {
-        var foot = els[i].classList.contains('brand--foot');
-        els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 84 : 62) + 'px;width:auto;display:block" ');
-      }
-      var ic = document.querySelector('link[rel="icon"]');
-      if (ic) ic.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(svg));
+(function () {
+  var C = '#060606', O = '#FF4500';
+  var mark =
+    '<path d="M607 705V470A153 153 0 0 1 760 317H1095A153 153 0 0 1 1248 470V795" fill="none" stroke="' + C + '" stroke-width="32"/>' +
+    '<path fill="' + C + '" d="M672 460H838V690Q838 765 745 765Q665 765 648 705L712 685Q720 710 745 710Q770 710 770 680V520H672Z"/>' +
+    '<path fill="' + C + '" d="M855 765V460H930L1025 665L1120 460H1193V765H1127V590L1050 765H1000L920 590V765Z"/>' +
+    '<path fill="' + O + '" d="M593 705C615 775 700 812 810 812C960 810 1110 818 1198 832V838C1100 826 960 826 810 828C690 830 620 782 593 705Z"/>' +
+    '<path fill="' + O + '" d="M600 790C625 885 695 942 790 940C900 936 1040 856 1198 845V840C1080 838 980 846 860 850C740 852 650 830 600 790Z"/>' +
+    '<circle cx="1238" cy="865" r="34" fill="none" stroke="' + O + '" stroke-width="28"/>';
+  var f = 'font-family="Epilogue,Arial Black,Arial,sans-serif" fill="' + C + '"';
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 295 1500 980" role="img" aria-label="Junior Martinez Transfer and Tours">' +
+    '<rect x="180" y="295" width="1500" height="980" rx="40" fill="#fff"/>' + mark +
+    '<text x="188" y="1130" font-size="164" font-weight="800" textLength="1482" lengthAdjust="spacingAndGlyphs" ' + f + '>JUNIOR MARTINEZ</text>' +
+    '<text x="262" y="1265" font-size="68" font-weight="700" textLength="508" lengthAdjust="spacing" ' + f + '>TRANSFER</text>' +
+    '<text x="890" y="1265" font-size="68" font-weight="700" ' + f + '>&amp;</text>' +
+    '<text x="1135" y="1265" font-size="68" font-weight="700" textLength="320" lengthAdjust="spacing" ' + f + '>TOURS</text></svg>';
+  var icon = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="560 280 780 700"><rect x="560" y="280" width="780" height="700" rx="90" fill="#fff"/>' + mark + '</svg>';
+  function apply() {
+    var els = document.querySelectorAll('.brand');
+    for (var i = 0; i < els.length; i++) {
+      var foot = els[i].classList.contains('brand--foot');
+      els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 96 : 70) + 'px;width:auto;display:block" ');
     }
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
-  })();
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', boot);
-  } else {
-    boot();
+    var ic = document.querySelector('link[rel="icon"]');
+    if (ic) ic.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(icon));
   }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', apply); else apply();
 })();
