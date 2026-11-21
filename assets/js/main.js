@@ -494,7 +494,7 @@
     '<circle cx="1238" cy="865" r="34" fill="none" stroke="' + O + '" stroke-width="28"/>';
   var f = 'font-family="Epilogue,Arial Black,Arial,sans-serif" fill="' + C + '"';
   var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 295 1500 980" role="img" aria-label="Junior Martinez Transfer and Tours">' +
-    '<rect x="180" y="295" width="1500" height="980" rx="40" fill="#fff"/>' + mark +
+    mark +
     '<text x="188" y="1130" font-size="164" font-weight="800" textLength="1482" lengthAdjust="spacingAndGlyphs" ' + f + '>JUNIOR MARTINEZ</text>' +
     '<text x="262" y="1265" font-size="68" font-weight="700" textLength="508" lengthAdjust="spacing" ' + f + '>TRANSFER</text>' +
     '<text x="890" y="1265" font-size="68" font-weight="700" ' + f + '>&amp;</text>' +
