@@ -489,7 +489,7 @@
       var els = document.querySelectorAll('.brand');
       for (var i = 0; i < els.length; i++) {
         var foot = els[i].classList.contains('brand--foot');
-        els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 64 : 46) + 'px;width:auto;display:block" ');
+        els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 84 : 62) + 'px;width:auto;display:block" ');
       }
       var ic = document.querySelector('link[rel="icon"]');
       if (ic) ic.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(svg));
