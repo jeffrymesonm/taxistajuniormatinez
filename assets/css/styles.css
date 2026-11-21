@@ -446,6 +446,15 @@ p + p { margin-top: 1rem; }
     linear-gradient(168deg, #2A1008 0%, #150703 52%, #0A0402 100%);
 }
 .hero__photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55; }
+/* Landscape: the Sienna sits in the top of the photo, right behind the headline.
+   Push the photo down so the van shows below the title, and fade its top edge. */
+@media (min-aspect-ratio: 1/1) {
+  .hero__photo {
+    inset: auto 0 0 0; height: 80%; object-position: center top; opacity: .7;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 24%);
+            mask-image: linear-gradient(180deg, transparent 0, #000 24%);
+  }
+}
 .hero__contours { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .5; }
 /* The warm disc behind the headline stands in for the reference's sunset. */
 .hero__sun {
