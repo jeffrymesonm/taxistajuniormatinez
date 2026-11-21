@@ -504,7 +504,8 @@
     var els = document.querySelectorAll('.brand');
     for (var i = 0; i < els.length; i++) {
       var foot = els[i].classList.contains('brand--foot');
-      els[i].innerHTML = svg.replace('<svg ', '<svg style="height:' + (foot ? 96 : 70) + 'px;width:auto;display:block" ');
+      var s = foot ? svg.split(C).join('#fff') : svg;
+      els[i].innerHTML = s.replace('<svg ', '<svg style="height:' + (foot ? 96 : 70) + 'px;width:auto;display:block" ');
     }
     var ic = document.querySelector('link[rel="icon"]');
     if (ic) ic.setAttribute('href', 'data:image/svg+xml,' + encodeURIComponent(icon));
